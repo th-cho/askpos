@@ -66,7 +66,7 @@ document.addEventListener('DOMContentLoaded', function () {
                     </a>
                     <ul class="depth2">
                         <li>
-                            <a href="../sale_management/sale_management_current.html">판매현황</a>
+                        <a href="../sale_management/sale_management_current.html">판매현황</a>
                         </li>
                     </ul>
                 </li>
