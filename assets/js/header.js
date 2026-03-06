@@ -7,7 +7,7 @@ document.addEventListener('DOMContentLoaded', function () {
             <a href="javascript:void(0);" class="menu">
                 <img src="../assets/images/menu.svg" alt="메뉴 버튼">
             </a>
-            <a href="../sale_management/sale_management_current.html" class="header-logo">
+            <a href="../sale_register/sale_register.html" class="header-logo">
                 <img src="../assets/images/logo.png" alt="" style="filter: brightness(0) invert(1);">
             </a>
             <div class="pos-info">
