@@ -8,6 +8,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 <img src="../assets/images/menu.svg" alt="메뉴 버튼">
             </a>
             <a href="../intro.html" class="header-logo">
+            <a href="../sale_management/sale_management_current.html" class="header-logo">
                 <img src="../assets/images/logo.png" alt="" style="filter: brightness(0) invert(1);">
             </a>
             <div class="pos-info">
