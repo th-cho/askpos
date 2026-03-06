@@ -230,7 +230,6 @@ document.addEventListener('DOMContentLoaded', function () {
     const dateEl = document.querySelector('.header-date-text');
     if (dateEl) dateEl.textContent = getKoreanDate();
 
-
     // nav 메뉴 open
     const menu = document.querySelector('.menu');
     const gnb = document.querySelector('header.main-header .gnb')
