@@ -1,0 +1,340 @@
+@charset "UTF-8";
+
+
+
+/*========================================================
+ Reset
+========================================================*/
+html {
+    -webkit-text-size-adjust: none;
+    /* Chrome, Safari, newer version of Opera*/
+    -moz-text-size-adjust: none;
+    /* Firefox */
+    -ms-text-size-adjust: none;
+    /* ie */
+    -o-text-size-adjust: none;
+    /* old version of opera */
+}
+
+html,
+body {
+    height: 100%;
+    font-weight: normal;
+    word-break: keep-all;
+}
+
+/* font-family:"NotoSansKrRegular",AppleSDGothicNeo,GoogleSans,Helvetica,"Malgun Gothic","맑은 고딕",sans-serif;color:#000;font-size:13px; */
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    /* [Pub] gloabal 기준 boxsozing : content-box
+    vertical-align:baseline;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    -webkit-font-smoothing:antialiased;
+    -moz-box-sizing:border-box;  */
+    -webkit-tap-highlight-color: transparent;
+}
+
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td {
+    margin: 0;
+    /* [Pub] gloabal 기준 boxsozing : content-box
+    vertical-align:baseline;
+    box-sizing:border-box;
+    -webkit-box-sizing:border-box; 
+    -webkit-font-smoothing:antialiased;
+    -moz-box-sizing:border-box;  */
+    -webkit-tap-highlight-color: transparent;
+}
+
+/* border:0;padding:0; */
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+main,
+menu,
+nav,
+section {
+    display: block;
+}
+
+ol,
+ul {
+    list-style: none;
+    margin: 0;
+}
+
+blockquote,
+q {
+    quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+    content: '';
+    content: none;
+}
+
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+table td,
+table th {
+    word-break: keep-all;
+    word-wrap: break-word;
+}
+
+address,
+caption,
+cite,
+code,
+dfn,
+em,
+strong,
+th,
+var {
+    font-style: normal;
+}
+
+hr {
+    overflow: visible;
+    display: block;
+    height: 1px;
+    margin: 0;
+    padding: 0;
+    border: 0;
+    border-top: 1px solid #e5e5e5;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+}
+
+a {
+    cursor: pointer;
+    color: inherit;
+}
+
+/* background:transparent; text-decoration:none; */
+a:hover,
+a:active {
+    text-decoration: none;
+    outline: 0;
+}
+
+address,
+caption,
+cite {
+    font-weight: normal;
+    font-style: normal;
+}
+
+strong,
+em,
+b {
+    font-weight: bold;
+    font-style: normal;
+}
+
+sub,
+sup {
+    font-size: 75%;
+    line-height: 0;
+    position: relative;
+    vertical-align: baseline;
+}
+
+sub {
+    bottom: -0.25em;
+}
+
+sup {
+    top: -0.5em;
+}
+
+legend,
+caption {
+    overflow: hidden;
+    visibility: hidden;
+    width: 0;
+    height: 0;
+    font-size: 0;
+    line-height: 0;
+}
+
+fieldset,
+img {
+    border: 0
+}
+
+label,
+select,
+input,
+textarea {
+    vertical-align: middle;
+    box-sizing: border-box
+}
+
+textarea {
+    width: 100%;
+    border-radius: 0;
+    box-shadow: none;
+    resize: none;
+    appearance: none;
+    -ms-overflow-style: none;
+    -webkit-appearance: none;
+    -webkit-border-radius: 0;
+}
+
+img {}
+
+/* width:100%;vertical-align:top; */
+img:not([src]) {
+    visibility: hidden;
+}
+
+select {
+    -webkit-appearance: none;
+    /* for chrome */
+    -moz-appearance: none;
+    /*for firefox*/
+    appearance: none;
+}
+
+select::-ms-expand {
+    display: none;
+}
+button {
+    display: block;
+    border:none;
+    background: none;
+    outline: none;
+    cursor: pointer;
+}
+/* table 셋팅 */
+table {
+    width: 100%;
+    border-collapse: collapse;
+    border-spacing: 0;
+    border-style: hidden;
+    overflow: hidden;
+    
+}
+tr,
+th,
+td {
+    vertical-align: middle;
+    /* white-space: nowrap; */
+}
+th{
+    text-align: left;
+}
+/* scrollbar custom */
+*::-webkit-scrollbar {
+    width: 12px;
+    height: 12px;
+}
+/* 스크롤바의 트랙 (배경) */
+*::-webkit-scrollbar-track {
+    background: #fff;
+    border-radius: 10px;
+}
+/* 스크롤바의 핸들 */
+*::-webkit-scrollbar-thumb {
+    background-color: var(--neutral-70);
+    border-radius: 10px;
+    border: 3px solid #fff;
+}
+/* hover의 경우*/
+*::-webkit-scrollbar-thumb:hover {
+    background-color: #6e6e6e;
+}

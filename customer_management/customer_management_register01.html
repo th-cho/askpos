@@ -1,0 +1,379 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>고객등록</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="customer_register">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">고객관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">고객등록</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">고객등록</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline search-btn customer_search">
+                        <img src="../assets/images/ico_search.svg" alt="">
+                        <span>기존 고객조회</span>
+                    </button>
+                    <button class="btn btn-md btn-outline efresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <section>
+                <div class="left_content box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-wrap-bar"></div>
+                        <div class="tit-24">필수 입력 정보 <b class="essential">*</b></div>
+                    </div>
+                    <div class="input-write">
+                        <div class="left_input">
+                            <div class="input-group-wrap">
+                                <div class="input-group select">
+                                    <p class="label-text">브랜드</p>
+                                    <select>
+                                        <option value="">전체</option>
+                                        <option value="">Cookie</option>
+                                    </select>
+                                </div>
+                                <div class="input-group select">
+                                    <p class="label-text">고객명</p>
+                                    <input type="text" class="input-md" placeholder="고객명을 입력하세요.">
+                                </div>
+                            </div>
+                            <div class="input-group-wrap col">
+                                <div class="segment-container">
+                                    <div class="segment-wrap segment-xsm">
+                                        <button class="segment-btn active"><img
+                                                src="../assets/images/ico_check.svg">핸드폰번호</button>
+                                        <button class="segment-btn"><img
+                                                src="../assets/images/ico_check.svg">이메일</button>
+                                        <div class="slide-wrap">
+                                            <div class="slide"></div>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="input-phone">
+                                    <div class="input-group">
+                                        <input type="text" class="input-md" placeholder="핸드폰번호" oninput="autoHyphen(this)" maxlength="13">
+                                    </div>
+                                    <button class="btn btn-md btn-outline">중복확인</button>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-email">
+                                    <div class="email_before">
+                                        <input type="text" class="input-md" placeholder="이메일">
+                                        <span>@</span>
+                                        <input type="text" class="input-md" id="domain-txt" placeholder="직접입력">
+                                    </div>
+                                    <div class="input-group select">
+                                        <select id="domain-list">
+                                            <option value="type">직적입력</option>
+                                            <option value="naver.com">Cookie</option>
+                                            <option value="gmail.com">Google</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group search">
+                                    <p class="label-text">관리매장</p>
+                                    <input type="text" class="input-md" placeholder="매장명, 매장코드 검색">
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group">
+                                    <p class="label-text">가입경로</p>
+                                    <input type="text" class="input-md" value="POS" readonly>
+                                </div>
+                                <div class="input-group">
+                                    <p class="label-text">탈퇴여부</p>
+                                    <input type="text" class="input-md" value="N" readonly>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group">
+                                    <p class="label-text">고객등급</p>
+                                    <input type="text" class="input-md" value="G(GOLD)" readonly>
+                                </div>
+                            </div>
+                        </div>
+                        <span class="input-bar"></span>
+                        <div class="right_input">
+                            <div class="input-group-wrap col">
+                                <div class="input-address">
+                                    <div class="input-group search">
+                                        <p class="label-text">주소</p>
+                                        <input type="text" class="input-md" placeholder="우편번호 검색">
+                                    </div>
+                                    <div class="input-group">
+                                        <input type="text" class="input-md" placeholder="상세주소 입력">
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group select">
+                                    <p class="label-text">내외국인 구분</p>
+                                    <select>
+                                        <option value="">내외국인 구분</option>
+                                        <option value="">Cookie</option>
+                                    </select>
+                                </div>
+                                <div class="input-group select">
+                                    <p class="label-text">성별</p>
+                                    <select>
+                                        <option value="">M 남</option>
+                                        <option value="">Cookie</option>
+                                    </select>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group">
+                                    <p class="label-text">생년월일</p>
+                                    <div class="input-calendar">
+                                        <div class="input-datepicker-wrap">
+                                            <div class="tui-datepicker-input tui-datetime-input">
+                                                <input type="text" id="datepicker-input" class="input-md">
+                                            </div>
+                                            <div id="tui-date-wrap" class="tui-date-wrap"></div>
+                                        </div>
+                                        <div class="input-group select">
+                                            <select>
+                                                <option value="">양력</option>
+                                                <option value="">Cookie</option>
+                                            </select>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group checkbox">
+                                    <p class="label-text">수신여부</p>
+                                    <div class="input-check-and-radio">
+                                        <label for="checkMail" class="input-check">
+                                            <input type="checkbox" id="checkMail">
+                                            <span class="check_bg"></span>
+                                            <em>이메일</em>
+                                        </label>
+                                        <label for="checkSms" class="input-check">
+                                            <input type="checkbox" id="checkSms">
+                                            <span class="check_bg"></span>
+                                            <em>SMS</em>
+                                        </label>
+                                        <label for="checkDm" class="input-check">
+                                            <input type="checkbox" id="checkDm">
+                                            <span class="check_bg"></span>
+                                            <em>DM</em>
+                                        </label>
+                                        <label for="checkTm" class="input-check">
+                                            <input type="checkbox" id="checkTm">
+                                            <span class="check_bg"></span>
+                                            <em>TM</em>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group-wrap">
+                                <div class="input-group checkbox">
+                                    <p class="label-text">동의여부</p>
+                                    <div class="input-check-and-radio">
+                                        <label for="checkTermsAgree" class="input-check">
+                                            <input type="checkbox" id="checkTermsAgree">
+                                            <span class="check_bg"></span>
+                                            <em>약관동의</em>
+                                        </label>
+                                        <label for="checkPrivacyAgree" class="input-check">
+                                            <input type="checkbox" id="checkPrivacyAgree">
+                                            <span class="check_bg"></span>
+                                            <em>개인정보수집동의</em>
+                                        </label>
+                                        <label for="checkMarketingAgree" class="input-check">
+                                            <input type="checkbox" id="checkMarketingAgree">
+                                            <span class="check_bg"></span>
+                                            <em>마케팅활용동의</em>
+                                        </label>
+                                        <label for="checkConsignmentAgree" class="input-check">
+                                            <input type="checkbox" id="checkConsignmentAgree">
+                                            <span class="check_bg"></span>
+                                            <em>개인정보처리위탁</em>
+                                        </label>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    
+                </div>
+                <div class="right_content box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-wrap-bar"></div>
+                        <div class="tit-24">선택 입력 정보</div>
+                    </div>
+                    <div class="full_input">
+                        <div class="input-group-wrap">
+                            <div class="input-group checkbox">
+                                <div class="input-check-and-radio">
+                                    <label for="checkChoiceAgree" class="input-check">
+                                        <input type="checkbox" id="checkChoiceAgree">
+                                        <span class="check_bg"></span>
+                                        <em>선택항목 수집이용 동의</em>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-wrap">
+                            <div class="input-group select">
+                                <select>
+                                    <option value="">서비스직</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                            </div>
+                            <div class="input-group select">
+                                <select>
+                                    <option value="">회원권 보유 유무</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                            </div>
+                            <div class="input-group select">
+                                <select>
+                                    <option value="">년 라운드횟수</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                            </div>
+                        </div>
+                        <div class="input-group-wrap">
+                            <div class="input-group select">
+                                <p class="label-text">결혼유무</p>
+                                <select>
+                                    <option value="">결혼유무</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                            </div>
+                            <div class="input-group">
+                                <p class="label-text">생년월일</p>
+                                <div class="input-calendar w100">
+                                    <div class="input-datepicker-wrap">
+                                        <div class="tui-datepicker-input tui-datetime-input">
+                                            <input type="text" id="datepicker-input2" class="input-md">
+                                        </div>
+                                        <div id="tui-date-wrap2" class="tui-date-wrap2"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="input-group-wrap col">
+                            <div class="input-group textarea">
+                                <p class="label-text">본사메모</p>
+                                <textarea name="" id="" placeholder="메모를 입력하세요."></textarea>
+                            </div>
+                            <div class="input-group textarea">
+                                <p class="label-text">매장메모</p>
+                                <textarea name="" id="" placeholder="메모를 입력하세요."></textarea>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+        </div>
+        
+    </main>
+    <!-- ========== 고객 검색 팝업 ========== -->
+    <div class="layer-wrap pop-customer-search" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">고객 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="고객명, 고객번호, 휴대폰번호, 이메일 검색">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-fixed2 table-selectable" id="employeeTbl">
+                                <tbody> 
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>고객 선택하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach( (el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[2].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[1].classList.add('active');
+            const depth3 = depth2[1].querySelectorAll('li > a');
+            depth3[0].classList.add('active');
+        })
+        
+    </script>
+</body>
+
+</html>

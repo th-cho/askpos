@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>단가 변경</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 단가 변경 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-sm" style="display: block;;">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">단가변경</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="tag-price" class="input-group-label">TAG가</label>
+                            <input type="text" class="input-md txt-align-right" id="tag-price"  value="318,000" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="unit-price" class="input-group-label">변경 전 가격</label>
+                            <input type="text" class="input-md txt-align-right" id="unit-price"  value="318,000" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-rate" class="input-group-label">할인율(%)</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-rate"  value="10">
+                        </div>
+                        <div class="input-group">
+                            <label for="change-price" class="input-group-label">변경 후 가격</label>
+                            <input type="text" class="input-md txt-align-right" id="change-price"  value="286,200">
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>변경하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+    
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+ 
+    </script>
+</body>
+
+</html>

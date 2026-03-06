@@ -1,0 +1,72 @@
+:root {
+    /* Salomon Primary */
+    --primary: #000000;
+    --primary-dark: #000000;
+    --primary-light: #4D4D4D;
+    
+    /* Wilson Primary */
+    --Wilson-primary: #4D738A;
+    --Wilson-primary-dark: #25495F;
+    --Wilson-primary-light: #68A1B8;
+
+    /* Success */
+    --success: #08C40F;
+    --success-dark: #046C08;
+    --success-light: #CFFCD0;
+
+    /* Warning */
+    --warning: #D59B05;
+    --warning-dark: #866203;
+    --warning-light: #FEF0CD;
+
+    /* Error */
+    --error: #CE0505;
+    --error-dark: #8B0303;
+    --error-light: #FFCCCC;
+
+    /* Neutral Variant */
+    --neutral-100: #FFF;
+    --neutral-98: #F5F7F9;
+    --neutral-95: #F0F2F5;
+    --neutral-90: #E4E8EC;
+    --neutral-80: #CDD4DB;
+    --neutral-70: #B1B5B9;
+    --neutral-60: #969CA1;
+    --neutral-50: #7B8289;
+    --neutral-40: #63696E;
+    --neutral-30: #4B4F53;
+    --neutral-20: #3A3D40; 
+    --neutral-10: #222425;
+    --neutral-0: #000;
+
+    /* Primary Variant */
+    --primary-100: #FFF;
+    --primary-98: #F5F5F5;
+    --primary-95: #EBEBEB;
+    --primary-90: #D6D6D6;
+    --primary-80: #ADADAD;
+    --primary-70: #858585;
+    --primary-60: #5C5C5C;
+    --primary-50: #000000;
+    --primary-40: #000000;
+    --primary-30: #000000;
+    --primary-20: #000000;
+    --primary-10: #000000;
+    --primary-0: #000;
+
+    /* Wilson Primary Variant */
+    --Wilson-primary-100: #FFF;
+    --Wilson-primary-98: #EAF1F6;
+    --Wilson-primary-95: #DFEAF1;
+    --Wilson-primary-90: #CEDFE9;
+    --Wilson-primary-80: #ADC7D7;
+    --Wilson-primary-70: #8BB0C6;
+    --Wilson-primary-60: #759CB3;
+    --Wilson-primary-50: #4D738A;
+    --Wilson-primary-40: #3C5A6C;
+    --Wilson-primary-30: #314A58;
+    --Wilson-primary-20: #253741;
+    --Wilson-primary-10: #121B21;
+    --Wilson-primary-0: #000;
+
+}

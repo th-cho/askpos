@@ -1,0 +1,256 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>매장정보</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 매장정보 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-lg" style="display: block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">매장 정보 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group select row nowrap">
+                                <select>
+                                    <option value="">매장구분</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select>
+                                    <option value="">지역구분</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select>
+                                    <option value="">매장브랜드</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <div class="input-group search">
+                                    <input type="text" class="input-md" placeholder="매장코드">
+                                </div>
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-check">
+                                <!-- <colgroup>
+                                    <col width="10%">
+                                    <col width="30%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                </colgroup> -->
+
+                                <thead>
+                                    <tr>
+                                        <th>선택</th>
+                                        <th>매장코드</th>
+                                        <th>매장명</th>
+                                        <th>매장구분</th>
+                                        <th>지역구분</th>
+                                        <th>매장브랜드</th>
+                                        <th>창고코드</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list1" class="input-check">
+                                                    <input type="checkbox" id="list1">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list2" class="input-check">
+                                                    <input type="checkbox" id="list2">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list3" class="input-check">
+                                                    <input type="checkbox" id="list3">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list4" class="input-check">
+                                                    <input type="checkbox" id="list4">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list5" class="input-check">
+                                                    <input type="checkbox" id="list5">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list6" class="input-check">
+                                                    <input type="checkbox" id="list6">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list7" class="input-check">
+                                                    <input type="checkbox" id="list7">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list8" class="input-check">
+                                                    <input type="checkbox" id="list8">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list9" class="input-check">
+                                                    <input type="checkbox" id="list9">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="td-check">
+                                            <div class="input-group checkbox">
+                                                <label for="list10" class="input-check">
+                                                    <input type="checkbox" id="list10">
+                                                    <span class="check_bg"></span>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+
+
+
+</body>
+
+</html>

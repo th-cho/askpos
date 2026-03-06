@@ -1,0 +1,1702 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>판매 등록</title>
+</head>
+
+<body>
+    <main>
+        <div class="left_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">판매등록</a>
+                </li>
+            </ul>
+            <div class="tit-group">
+                <h2 class="tit-36">
+                    판매등록
+                </h2>
+                <div class="tit-store">
+                    <span>BIZ009</span>
+                    <p>살로몬 성수 직영점(플래그십 스토어)</p>
+                    <button class="btn btn-sm btn-outline store-change">변경</button>
+                </div>
+            </div>
+
+            <div class="box-32 shape-md">
+                <div class="register-txt">
+                    <div>
+                        <p class="txt-18">상품을 검색하거나</p>
+                        <p class="txt-24">바코드를 스캔해주세요.</p>
+                    </div>
+                    <button class="btn btn-lg btn-outline product-search">상품 직접 검색</button>
+                </div>
+            </div>
+            <div class="box-32 shape-md">
+                <div class="register-txt">
+                    <div>
+                        <p class="txt-18">상품을 구매할 고객님께서</p>
+                        <p class="txt-24">마일리지 적립/사용을 원하시나요?</p>
+                    </div>
+                    <button class="btn btn-lg btn-outline point-search">적립 고객 검색</button>
+                </div>
+            </div>
+            <div class="box-24 shape-lg">
+                <div class="row">
+                    <h2 class="txt-24">당일 판매현황</h2>
+                    <div class="sale-price-wrap">
+                        <p>판매수량 <span class="txt-24">120개</span></p>
+                        <p>총 매출액 <span class="txt-24">1,200,000원</span></p>
+                    </div>
+                </div>
+                <div class="box-16 shape-sm">
+                    <div class="row">
+                        <ul class="sales">
+                            <li>
+                                <p>현금매출</p>
+                                <p class="txt-16">200,000원</p>
+                            </li>
+                            <li>
+                                <p>카드매출</p>
+                                <p class="txt-16">1,000,000원</p>
+                            </li>
+                        </ul>
+                        <div class="bar"></div>
+                        <ul class="mileage">
+                            <li>
+                                <p>마일리지</p>
+                                <p class="txt-16">200,000원</p>
+                            </li>
+                            <li>
+                                <p>에누리금액</p>
+                                <p class="txt-16">-20,000원</p>
+                            </li>
+                            <li>
+                                <p>프로모션 할인</p>
+                                <p class="txt-16">-10,000원</p>
+                            </li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <ul class="w100 sale-item">
+                <li class="w33 shape-md">
+                    <a href="javascript:void(0);" class="receipt-search">
+                        <img src="../assets/images/sale_receipt.svg" alt="">
+                        <span class="txt-18">영수증 조회</span>
+                    </a>
+                </li>
+                <li class="w33 shape-md">
+                    <a href="javascript:void(0);">
+                        <img src="../assets/images/sale_new-customer.svg" alt="">
+                        <span class="txt-18">신규고객 등록</span>
+                    </a>
+                </li>
+                <li class="w33 shape-md">
+                    <a href="javascript:void(0);">
+                        <img src="../assets/images/sale_other-store-return.svg" alt="">
+                        <span class="txt-18">타매장판매반품</span>
+                    </a>
+                </li>
+            </ul>
+        </div>
+        <div class="right_content">
+            <div class="table-header">
+                <div class="segment-wrap segment-lg">
+                    <button class="segment-btn active"><img src="../assets/images/ico_check.svg">판매</button>
+                    <button class="segment-btn"><img src="../assets/images/ico_check.svg">반품</button>
+                    <div class="slide-wrap">
+                        <div class="slide"></div>
+                    </div>
+                </div>
+                <div class="table-header-btns">
+                    <button class="btn btn-md btn-outline hold-register">보류등록</button>
+                    <button class="btn btn-md btn-outline">보류조회</button>
+                    <button class="btn btn-md btn-outline"><i class="ico_delete"></i>전체삭제</button>
+                </div>
+            </div>
+            <div class="table-content">
+                <table class="table-basic size-lg table-selectable">
+                    <colgroup>
+                        <col width="auto">
+                        <col width="50%">
+                        <col width="auto">
+                        <col width="auto">
+                        <col width="auto">
+                    </colgroup>
+                    <tbody>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        <div class="badge sale">
+                                            <span>세일</span>
+                                        </div>
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-md btn-neutral price-change">변경</button>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        <div class="badge sale">
+                                            <span>세일</span>
+                                        </div>
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-md btn-neutral price-change">변경</button>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        <div class="badge sale">
+                                            <span>세일</span>
+                                        </div>
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-md btn-neutral price-change">변경</button>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        <div class="badge sale">
+                                            <span>세일</span>
+                                        </div>
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                                <button class="btn btn-md btn-neutral price-change">변경</button>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td>
+                                <button class="btn btn-md btn-outline">삭제</button>
+                            </td>
+                            <td>
+                                <div class="table-lists-cont">
+                                    <div class="table-product">
+                                        
+                                        <div class="product-name">SALOMON DT ROLL-K</div>
+                                    </div>
+                                    <div class="table-product-info">
+                                        <div>TAGWD8509/사입</div>
+                                        <div>
+                                            <b>색상</b>
+                                            <span>01</span>
+                                        </div>
+                                        <div>
+                                            <b>규격</b>
+                                            <span>00L</span>
+                                        </div>
+                                        <div>
+                                            <b>재고수량</b>
+                                            <span>1</span>
+                                        </div>
+                                        <div>
+                                            <b>TAG가</b>
+                                            <span>410,000</span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </td>
+                            <td>
+                            </td>
+                            <td>
+                                <p class="table-price txt-24">310,000원</p>
+                            </td>
+                            <td>
+                                <div class="table-lists-quantity">
+                                    <div class="input-group number">
+                                        <button class="minus">
+                                            <i class="ico_minus"></i>
+                                        </button>
+                                        <input type="text" class="input-md quantity" value="1">
+                                        <button class="plus">
+                                            <i class="ico_plus"></i>
+                                        </button>
+                                    </div>
+                                </div>
+                            </td>
+                        </tr>
+                        
+                        
+                    </tbody>
+                </table>
+                
+            </div>
+            <div class="table-footer">
+                <div class="table-footer-total">
+                    <div class="total-quantity">
+                        총 상품 <b>3</b>개
+                    </div>
+                    <div class="total-price-wrap">
+                        <div class="discount-price">할인금액 <b>-20,000</b>원</div>
+                        <div class="total-price">총 결제금액 <b>700,000</b>원</div>
+                    </div>
+                </div>
+                <div class="table-footer-btns">
+                    <div class="discount-apply">
+                        <button class="btn btn-xl btn-tonal discount-btn">할인 적용하기</button>
+                    </div>
+                    <div class="final-payment">
+                        <button class="btn btn-xl btn-primary" onclick="location.href='./sale_register_payment.html'">
+                            <b>700,000</b>원 결제하기
+                        </button>
+                    </div>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ========== 단가 변경 팝업 ========== -->
+    <div class="layer-wrap pop-price" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">단가변경</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="tag-price" class="input-group-label">TAG가</label>
+                            <input type="text" class="input-md txt-align-right" id="tag-price" value="318,000" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="unit-price" class="input-group-label">변경 전 가격</label>
+                            <input type="text" class="input-md txt-align-right" id="unit-price" value="318,000"
+                                readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-rate" class="input-group-label">할인율(%)</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-rate" value="10">
+                        </div>
+                        <div class="input-group">
+                            <label for="change-price" class="input-group-label">변경 후 가격</label>
+                            <input type="text" class="input-md txt-align-right" id="change-price" value="286,200">
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>변경하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <!-- ========== 적립 고객 검색 팝업 ========== -->
+    <div class="layer-wrap pop-point" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">적립 고객 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="고객명, 고객번호, 휴대폰번호, 이메일 검색">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-fixed2 table-selectable" id="customerTbl">
+                                <tbody>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>고객
+                                    선택하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <div class="layer-wrap pop-discount" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">할인 적용하기</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-selectable" id="discountTbl">
+                                <tbody>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="price-segment" class="input-radio">
+                                                    <input type="radio" id="price-segment" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>금액구간별 할인 금액</em>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-20,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon" class="input-radio">
+                                                    <input type="radio" id="cooupon" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 50% 쿠폰</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요">
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-119,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon2" class="input-radio">
+                                                    <input type="radio" id="cooupon2" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 쿠폰 금액 적용 만원</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요">
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-10,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="promotion" class="input-radio">
+                                                    <input type="radio" id="promotion" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 프로모션 할인</em>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-10,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon3" class="input-radio">
+                                                    <input type="radio" id="cooupon3" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>대상 상품별 쿠폰 적용 (40% 쿠폰)</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요">
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-95,200원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>할인
+                                    적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 영수증조회 팝업 ========== -->
+    <div class="layer-wrap pop-receipt-search" id="popup-sample-lg">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">영수증조회</h4>
+
+                    <div class="button-group">
+                        <button class="btn btn-md btn-outline">영수증 재발행</button>
+                        <button class="btn btn-md btn-outline">영수증 재판매</button>
+                        <button class="btn btn-md btn-outline txt-error">영수증 반품</button>
+                        <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                            <img src="../assets/images/ico_download.svg" alt="">
+                            <span>엑셀</span>
+                        </button>
+                    </div>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span>~</span>
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input2" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap2" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="판매번호">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="receipt-tbl-wrapper">
+                            <table class="table-basic size-md table-selectable fold-table table-fixed with-tfoot"
+                                id="receiptTbl">
+                                <thead>
+                                    <tr>
+                                        <th>판매일자</th>
+                                        <th>판매번호</th>
+                                        <th class="txt-align-right">판매수량</th>
+                                        <th class="txt-align-right">판매금액</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>2024-06-184</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td class="txt-align-right">1</td>
+                                        <td class="txt-align-right">40,000</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>고객번호</th>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>마일리지금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션 할인</th>
+                                                            <th>발생 마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2018070032</td>
+                                                            <td>70,600</td>
+                                                            <td>90,600</td>
+                                                            <td></td>
+                                                            <td>10,000</td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>상품 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00004</td>
+                                                            <td>현금</td>
+                                                            <td>현금</td>
+                                                            <td>70,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>2024-06-184</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td class="txt-align-right">1</td>
+                                        <td class="txt-align-right">40,000</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>고객번호</th>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>마일리지금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션 할인</th>
+                                                            <th>발생 마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2018070032</td>
+                                                            <td>70,600</td>
+                                                            <td>90,600</td>
+                                                            <td></td>
+                                                            <td>10,000</td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>상품 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00004</td>
+                                                            <td>현금</td>
+                                                            <td>현금</td>
+                                                            <td>70,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>2024-06-184</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td class="txt-align-right">1</td>
+                                        <td class="txt-align-right">40,000</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>고객번호</th>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>마일리지금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션 할인</th>
+                                                            <th>발생 마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>2018070032</td>
+                                                            <td>70,600</td>
+                                                            <td>90,600</td>
+                                                            <td></td>
+                                                            <td>10,000</td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>상품 상세정보</h4>
+                                                <table class="table-basic size-smv">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>판매</td>
+                                                            <td>INXA-K</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>40,500</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00004</td>
+                                                            <td>현금</td>
+                                                            <td>현금</td>
+                                                            <td>70,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th colspan="2">합계</th>
+                                        <th class="txt-align-right">17</th>
+                                        <th class="txt-align-right">140,000</th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>닫기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 보류등록 팝업 ========== -->
+    <div class="layer-wrap pop-hold" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="alert-wrapper">
+                            <img src="../assets/images/ico_success.svg">
+                            <p>판매보류 되었습니다.</p>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>확인</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 상품 검색 팝업 ========== -->
+    <div class="layer-wrap pop-product-search" id="popup-sample-lg">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">상품검색</h4>
+                    <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group select row">
+                                <select class="w166">
+                                    <option value="">상품구분</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">대분류</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">중분류</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">소분류</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">년도</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w140">
+                                    <option value="">라인</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w140">
+                                    <option value="">성별</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w140">
+                                    <option value="">아이템</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <select class="w140">
+                                    <option value="">시즌</option>
+                                    <option value="">Cookie</option>
+                                    <option value="">Jam</option>
+                                    <option value="">Jelly</option>
+                                </select>
+                                <div class="input-group search w288">
+                                    <input type="text" class="input-md" placeholder="상품코드 검색">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <col width="10%">
+                                    <col width="30%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%"> 
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th class="fixedHeader">상품코드</th>
+                                        <th class="fixedHeader">상품명</th>
+                                        <th class="fixedHeader">색상</th>
+                                        <th class="fixedHeader">색상명</th>
+                                        <th class="fixedHeader">규격</th>
+                                        <th class="fixedHeader">ITEM번호</th>
+                                        <th class="fixedHeader">TAG가</th>
+                                        <th class="fixedHeader">상품구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>22455-L</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 매장 설정 팝업 ========== -->
+    <div class="layer-wrap pop-store-setting" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">매장 설정</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="datepicker-input" class="input-group-label">판매일자</label>
+                            <div class="input-datepicker-wrap">
+                                <div class="tui-datepicker-input tui-datetime-input">
+                                    <input type="text" id="datepicker-input3" class="input-md">
+                                </div>
+                                <div id="tui-date-wrap3" class="tui-date-wrap"></div>
+                            </div>
+                        </div>
+                        <div class="input-group search">
+                            <label for="store-code" class="input-group-label">매장 코드</label>
+                            <input type="text" class="input-md" placeholder="매장명, 매장코드 검색">
+                        </div>
+                      
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        // nav menu 현재 페이지 활성화
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach( (el, idx) => {
+                el.classList.remove('active')
+                // depth[1].classList.add('active-arrow')
+                depth[0].classList.add('active');
+            })
+            // const depth2 = document.querySelectorAll('.depth2');
+            // depth2[0].classList.add('active');
+            // const depth3 = depth2[0].querySelectorAll('li > a');
+            // depth3[0].classList.add('active');
+        })
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,460 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>매장품번History현황</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">상품관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">매장품번History현황</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">매장품번History현황</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                        <img src="../assets/images/ico_download.svg" alt="">
+                        <span>엑셀</span>
+                    </button>
+                    <button class="btn btn-md btn-outline txt-error delete-btn">
+                        <img src="../assets/images/ico_delete_tonal.svg" alt="">
+                        <span>삭제</span>
+                    </button>
+                    <button class="btn btn-md btn-outline new-customer-btn">
+                        <img src="../assets/images/ico_plus.svg" alt="">
+                        <span>신규</span>
+                    </button>
+                    <button class="btn btn-md btn-outline refresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-tonal"><img src="../assets/images/ico_check.svg" alt="" style="filter: brightness(0);"><span>저장</span></button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="search-options">
+
+                    <div class="input-group search w400">
+                        <p class="label-text">상품코드</p>
+                        <input type="text" class="input-md" placeholder="상품코드">
+                    </div>
+                    <div class="input-group search w200 color-search">
+                        <p class="label-text">색상</p>
+                        <input type="text" class="input-md" placeholder="색상">
+                    </div>
+                    <div class="input-group search w400">
+                        <p class="label-text">매장코드</p>
+                        <input type="text" class="input-md" placeholder="매장코드">
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">
+                        상품정보
+                        <span class="tit-sub">상품정보를 클릭시 해당 내역이 상세 정보에 나타납니다.</span>
+                    </div>
+                </div>
+                <div class="table-container col4 fixed-tbody">
+                    <table class="table-basic size-md table-fixed2">
+                        <thead>
+                            <tr>
+                                <th>상품코드</th>
+                                <th>TAG가</th>
+                                <th>구분</th>
+                                <th>합계</th>
+                                <th>S1</th>
+                                <th>S2</th>
+                                <th>S3</th>
+                                <th>S4</th>
+                                <th>S5</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td rowspan="5" style="border-right: 1px solid var(--neutral-90);">12533</td>
+                                <td rowspan="5" style="border-right: 1px solid var(--neutral-90);">12,000</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            <tr>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td>1</td>
+                            </tr>
+                            
+                        </tbody>
+                   
+                    </table>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">상품상세정보</div>
+                </div>
+                <div class="table-container col4">
+                    <table class="table-basic size-md table-fixed2 table-selectable">
+                        <thead>
+                            <tr>
+                                <th>일자</th>
+                                <th>송신처</th>
+                                <th>구분</th>
+                                <th>수신처</th>
+                                <th>합계</th>
+                                <th>***</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                            <tr>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>합계</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ========== 주문번호 검색 팝업 ========== -->
+    <div class="layer-wrap pop-order-num-search" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">주문번호 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="주문번호">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th>주문번호</th>
+                                        <th>주문정보</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 색상 검색 팝업 ========== -->
+    <div class="layer-wrap pop-color-search" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">색상 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="색상">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th>색상</th>
+                                        <th>색상명</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                    <tr>
+                                        <td>**</td>
+                                        <td>**</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach((el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[4].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[3].classList.add('active');
+            const depth3 = depth2[3].querySelectorAll('li > a');
+            depth3[2].classList.add('active');
+        })
+
+    </script>
+</body>
+
+</html>

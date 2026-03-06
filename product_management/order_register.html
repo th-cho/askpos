@@ -1,0 +1,937 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>주문등록(매장)</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">상품관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">주문등록(매장)</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">주문등록(매장)</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                        <img src="../assets/images/ico_download.svg" alt="">
+                        <span>엑셀</span>
+                    </button>
+                    <button class="btn btn-md btn-outline txt-error delete-btn">
+                        <img src="../assets/images/ico_delete_tonal.svg" alt="">
+                        <span>삭제</span>
+                    </button>
+                    <button class="btn btn-md btn-outline new-customer-btn">
+                        <img src="../assets/images/ico_plus.svg" alt="">
+                        <span>신규</span>
+                    </button>
+                    <button class="btn btn-md btn-outline refresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-tonal"><img src="../assets/images/ico_check.svg" alt="" style="filter: brightness(0);"><span>저장</span></button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="search-options">
+
+                    <div class="input-group search rt-store-search w400">
+                        <p class="label-text">매장코드</p>
+                        <input type="text" class="input-md" placeholder="매장코드" >
+                    </div>
+                    <div class="input-dates">
+                        <p class="label-text">주문번호</p>
+                        <div>
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group search w200 order-num-search">
+                                <input type="text" class="input-md" placeholder="주문번호">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">바코드입력</div>
+                </div>
+                <div class="search-options">
+                    <div class="input-group search rt-product-search col">
+                        <p class="label-text">바코드입력</p>
+                        <div>
+                            <input type="text" class="input-md w400" placeholder="바코드 입력">
+                            <span>바코드입력이 가능합니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">주문정보</div>
+                </div>
+                <div class="table-container col4">
+                    <table class="table-basic size-md table-fixed2 table-check">
+                        <!-- <colgroup>
+                            <col width="10%">
+                            <col width="30%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                        </colgroup> -->
+
+                        <thead>
+                            <tr>
+                                <th>선택</th>
+                                <th>상품코드</th>
+                                <th>상품명</th>
+                                <th>색상</th>
+                                <th>색상명</th>
+                                <th>규격</th>
+                                <th>주문가능여부</th>
+                                <th>확정여부</th>
+                                <th>주문수량</th>
+                                <th>비고</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list1" class="input-check">
+                                            <input type="checkbox" id="list1">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list2" class="input-check">
+                                            <input type="checkbox" id="list2">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list3" class="input-check">
+                                            <input type="checkbox" id="list3">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list4" class="input-check">
+                                            <input type="checkbox" id="list4">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list5" class="input-check">
+                                            <input type="checkbox" id="list5">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list6" class="input-check">
+                                            <input type="checkbox" id="list6">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list7" class="input-check">
+                                            <input type="checkbox" id="list7">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list8" class="input-check">
+                                            <input type="checkbox" id="list8">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list9" class="input-check">
+                                            <input type="checkbox" id="list9">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td class="td-check">
+                                    <div class="input-group checkbox">
+                                        <label for="list10" class="input-check">
+                                            <input type="checkbox" id="list10">
+                                            <span class="check_bg"></span>
+                                        </label>
+                                    </div>
+                                </td>
+                                <td>TEPMD4412</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>06</td>
+                                <td>BLACK</td>
+                                <td>00L</td>
+                                <td>Y</td>
+                                <td>N</td>
+                                <td>1</td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>합계</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>5</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ========== 매장정보검색(RT) 팝업 ========== -->
+    <div class="layer-wrap pop-store-search-rt" id="popup-sample-lg">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">매장 정보 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group select row nowrap">
+                                <select class="w160">
+                                    <option value="">매장구분</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w160">
+                                    <option value="">지역구분</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w160">
+                                    <option value="">매장브랜드</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <div class="input-group search">
+                                    <input type="text" class="input-md" placeholder="매장코드">
+                                </div>
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <!-- <col width="10%">
+                                    <col width="30%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">  -->
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th>매장코드</th>
+                                        <th>매장명</th>
+                                        <th>매장구분</th>
+                                        <th>지역구분</th>
+                                        <th>매장브랜드</th>
+                                        <th>창고코드</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>AKZ0048</td>
+                                        <td>베어즈베스트(CC)(직영)</td>
+                                        <td>01 (직영점 DC)</td>
+                                        <td>02 (인천)</td>
+                                        <td>S (Salomon)</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 상품검색(RT) 팝업 ========== -->
+    <div class="layer-wrap pop-product-search-rt" id="popup-sample-lg">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">상품 검색</h4>
+                    <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group select row">
+                                <select class="w166">
+                                    <option value="">상품구분</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">대분류</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">중분류</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w186">
+                                    <option value="">소분류</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">년도</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">브랜드</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">라인</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">성별</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">아이템</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <select class="w124">
+                                    <option value="">시즌</option>
+                                    <option value="">Cookie</option>
+                                </select>
+                                <div class="input-group search w212">
+                                    <input type="text" class="input-md" placeholder="상품코드 검색">
+                                </div>
+                            </div>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <!-- <col width="10%">
+                                    <col width="30%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">  -->
+                                </colgroup>
+
+                                <thead>
+                                    <tr>
+                                        <th>바코드</th>
+                                        <th>상품코드</th>
+                                        <th>상품명</th>
+                                        <th>색상</th>
+                                        <th>색상명</th>
+                                        <th>규격</th>
+                                        <th>TAG가</th>
+                                        <th>상품구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    <tr>
+                                        <td>12345*****</td>
+                                        <td>22455-L</td>
+                                        <td>DJ RainJkt Z-Off Slv Wmn Wh/Bk</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>**</td>
+                                        <td>240,000</td>
+                                        <td>01(용품)</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 주문번호 검색 팝업 ========== -->
+    <div class="layer-wrap pop-order-num-search" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">주문번호 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="주문번호">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th>주문번호</th>
+                                        <th>주문정보</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                    <tr>
+                                        <td>00001</td>
+                                        <td>주문정보입니다.</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach((el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[4].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[3].classList.add('active');
+            const depth3 = depth2[3].querySelectorAll('li > a');
+            depth3[0].classList.add('active');
+        })
+
+    </script>
+</body>
+
+</html>

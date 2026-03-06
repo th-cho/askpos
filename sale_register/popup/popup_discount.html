@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>할인 적용하기</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 할인 적용하기 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-md" style="display: block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">할인 적용하기</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-selectable" id="discountTbl">
+                                <tbody> 
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="price-segment" class="input-radio">
+                                                    <input type="radio" id="price-segment" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>금액구간별 할인 금액</em>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-20,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon" class="input-radio">
+                                                    <input type="radio" id="cooupon" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 50% 쿠폰</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요"> 
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-119,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon2" class="input-radio">
+                                                    <input type="radio" id="cooupon2" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 쿠폰 금액 적용 만원</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요"> 
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-10,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="promotion" class="input-radio">
+                                                    <input type="radio" id="promotion" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>상품별 프로모션 할인</em>
+                                                </label>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-10,000원</td>
+                                    </tr>
+                                    <tr>
+                                        <td>
+                                            <div class="input-group radio">
+                                                <label for="cooupon3" class="input-radio">
+                                                    <input type="radio" id="cooupon3" name="discount-radio">
+                                                    <span class="radio_bg"></span>
+                                                    <em>대상 상품별 쿠폰 적용 (40% 쿠폰)</em>
+                                                </label>
+                                                <div class="input-group hide">
+                                                    <input type="text" class="input-md" placeholder="쿠폰 번호를 입력해주세요"> 
+                                                    <button class="btn btn-md btn-outline">쿠폰 확인</button>
+                                                </div>
+                                            </div>
+                                        </td>
+                                        <td class="txt-align-right">-95,200원</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                        
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>할인 적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+    
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const discountTbl = document.getElementById('discountTbl');
+        const discountTblRows = discountTbl.getElementsByTagName('tr');
+
+        for (let i = 0; i < discountTblRows.length; i++) { // 첫 번째 행은 헤더이므로 제외
+            discountTblRows[i].addEventListener('click', function() {
+                // 라디오 버튼을 클릭하면 행 선택 이벤트가 중복되지 않도록 방지
+                if (event.target.type === 'radio') {
+                    return;
+                }
+                
+                // 이미 선택된 행이 있다면 선택 해제
+                const selected = discountTbl.querySelector('.selected');
+                if (selected) {
+                    const selectedRadioGroup = selected.querySelector(".input-group.radio");
+                    if (selectedRadioGroup) {
+                        //라디오 안에 input 비활성화
+                        selectedRadioGroup.classList.remove('active');
+                        console.log('selectedRadioGroup', selectedRadioGroup);
+                    }
+                    // 클릭한 행을 선택 해제
+                    selected.classList.remove('selected'); 
+                }
+                
+                
+                // 클릭한 행을 선택
+                this.classList.add('selected');
+
+                //라디오 안에 input 활성화
+                const radioGroup = this.querySelector(".input-group.radio");
+                if (radioGroup) {
+                    radioGroup.classList.add('active');
+                    console.log('radioGroup', radioGroup);
+                }
+            });
+        }
+
+    });
+
+
+    
+    </script>
+</body>
+
+</html>

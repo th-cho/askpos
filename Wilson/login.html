@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-wrap wilson-wrap">
+        <div class="login-banner">
+            <!-- <img src="./assets/images/login_banner.png" alt="로그인 배너"> -->
+        </div>
+        <div class="login-main">
+            <div class="login-main-inner">
+                <!-- login-header -->
+                <div class="login-header">
+                    <div class="login-logo">
+                        <img src="../assets/images/wilson/logo_bk.svg" alt="">
+                    </div>
+                    <h2>POS LOGIN</h2>
+                </div>
+                <!-- login-content -->
+                <div class="login-content">
+                    <div class="login-group">
+                        <div class="input-group">
+                            <div class="input-datepicker-wrap">
+                                <div class="tui-datepicker-input tui-datetime-input">
+                                    <input type="text" id="datepicker-input" class="input-md">
+                                </div>
+                                <div id="tui-date-wrap" class="tui-date-wrap"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="input-md" placeholder="아이디">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="input-md" placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <div class="login-info">
+                        <div class="login-check">
+                            <div class="input-group checkbox">
+                                <label for="saveId" class="input-check">
+                                    <input type="checkbox" id="saveId" checked>
+                                    <span class="check_bg type2"></span>
+                                    <em>아이디 저장</em>
+                                </label>
+                            </div>
+                            <div class="login-register">
+                                <a href="javascript:void(0);">아이디/비밀번호 찾기</a>
+                                <a href="javascript:void(0);">회원가입</a>
+                            </div>
+                        </div>
+                        <div class="login-btn-wrap">
+                            <div class="compo-button">
+                                <button class="btn btn-xl btn-wilson-primary" onClick="location.href='sale_register/sale_register.html'">로그인</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- login-footer -->
+                <div class="login-footer">
+                    <h2>고객센터 : 1544-7710</h2>
+                    <p>COPYRIGHT @ AMER SPORTS KOREA ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,443 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>부자재주문</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">상품관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">주문등록(매장)</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">부자재주문등록</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                        <img src="../assets/images/ico_download.svg" alt="">
+                        <span>엑셀</span>
+                    </button>
+                    <button class="btn btn-md btn-outline txt-error delete-btn">
+                        <img src="../assets/images/ico_delete_tonal.svg" alt="">
+                        <span>삭제</span>
+                    </button>
+                    <button class="btn btn-md btn-outline new-customer-btn">
+                        <img src="../assets/images/ico_plus.svg" alt="">
+                        <span>신규</span>
+                    </button>
+                    <button class="btn btn-md btn-outline refresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-tonal"><img src="../assets/images/ico_check.svg" alt="" style="filter: brightness(0);"><span>저장</span></button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="search-options">
+
+                    <div class="input-group search w400">
+                        <p class="label-text">매장코드</p>
+                        <input type="text" class="input-md" placeholder="매장코드">
+                    </div>
+                    <div class="input-dates">
+                        <p class="label-text">주문번호</p> 
+                        <div>
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group search w200 order-num-search material-info">
+                                <input type="text" class="input-md" placeholder="주문번호">
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">바코드입력</div>
+                </div>
+                <div class="search-options">
+                    <div class="input-group search col">
+                        <p class="label-text">바코드입력</p>
+                        <div>
+                            <input type="text" class="input-md w400" placeholder="바코드 입력">
+                            <span>바코드입력이 가능합니다.</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">주문정보</div>
+                </div>
+                <div class="table-container col4">
+                    <table class="table-basic size-md table-fixed2 table-selectable">
+                        <colgroup>
+                            <col width="10%">
+                            <col width="30%">
+                            <col width="15%">
+                            <col width="10%">
+                            <col width="15%">
+                            <col width="20%">
+                        </colgroup>
+
+                        <thead>
+                            <tr>
+                                <th>부자재코드</th>
+                                <th>부자재명</th>
+                                <th>주문수량</th>
+                                <th>비고</th>
+                                <th>확정수량</th>
+                                <th>확정일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            <tr>
+                                <td>233</td>
+                                <td>쇼핑백_대</td>
+                                <td>100</td>
+                                <td></td>
+                                <td>100</td>
+                                <td>2024-06-26</td>
+                            </tr>
+                            
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>합계</th>
+                                <th></th>
+                                <th>400</th>
+                                <th></th>
+                                <th>400</th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+
+        </div>
+    </main>
+    <!-- ========== 부자재정보 팝업 ========== -->
+    <div class="layer-wrap pop-material-info" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">부자재정보</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="부자재코드">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th>부자재코드</th>
+                                        <th>부자재명</th>
+                                        <th>주문가능여부</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>100</td>
+                                        <td>쇼핑백_대</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>쇼핑백_중</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>쇼핑백_소</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>기프트 박스_대</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>기프트 박스_중</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>기프트 박스_벨트</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>스티커</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>리본</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>습자지</td>
+                                        <td>Y</td>
+                                    </tr>
+                                    <tr>
+                                        <td>102</td>
+                                        <td>폴리백 셔츠</td>
+                                        <td>Y</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach((el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[4].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[3].classList.add('active');
+            const depth3 = depth2[3].querySelectorAll('li > a');
+            depth3[1].classList.add('active');
+        })
+
+    </script>
+</body>
+
+</html>

@@ -1,0 +1,734 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>결제 하기</title>
+</head>
+
+<body>
+    <header class="main-header">
+        <div class="header-inner">
+            <div class="left-header">
+                <a href="./sale_register.html" class="prev-page" style="display:flex; align-items:center;">
+                    <img src="../assets/images/prev_arrow.svg" alt="이전 버튼">
+                    <span style="color: #fff;">이전으로</span>
+                </a>
+            </div>
+            <div class="right-header">
+                <div class="header-date">
+                    <span>2024.7.3(수) 오후 1:28</span>
+                </div>
+            </div>
+        </div>
+        <nav class="gnb">
+            <div class="gnb-inner">
+                <ul class="depth1">
+                    <li><a href="javascript:void(0);" class='active'>판매등록</a></li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>판매관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">판매관리1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">판매관리2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>고객관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">고객 등록</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">고객 조회</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">관리매장변경요청</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">관리매장변경현황</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>RT관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">RT관리1</a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">RT관리2</a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>상품관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    상품관리1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    상품관리2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>반품관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    반품관리1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    반품관리2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>재고관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    재고관리1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    재고관리2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>수선/수리관리</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    수선관리1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    수선관리2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li>
+                        <a href="javascript:void(0);">
+                            <span>커뮤니티</span>
+                            <img src="../assets/images/depth_arrow.svg" alt="">
+                        </a>
+                        <ul class="depth2">
+                            <li>
+                                <a href="javascript:void(0);">
+                                    커뮤니티1
+                                </a>
+                            </li>
+                            <li>
+                                <a href="javascript:void(0);">
+                                    커뮤니티2
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            
+        </nav>
+    </header>
+    <main class="register_payment">
+        <div class="left_content">
+            <div class="row">
+                <h2 class="tit-36">총 결제 금액</h2>
+                <div class="sale-price-wrap">
+                    <p class="txt-18">판매수량 <span class="txt-32">120개</span></p>
+                    <p class="txt-18">총 매출액 <span class="txt-32">1,200,000원</span></p>
+                </div>
+            </div>
+            <div class="payment-how">
+                <div class="tit-wrap">
+                    <h2 class="tit-36">결제방법</h2>
+                </div>
+                <!-- <h2 class="tit-36">결제방법</h2> -->
+                <ul class="w100 payment-how-list">
+                    <li>
+                        <a class="shape-md card_payment" href="javascript:void(0);">
+                            <img src="../assets/images/ico_credit2.svg" alt="">
+                            <span>신용카드</span>
+                        </a>
+                        <a class="shape-md card_cancel" href="javascript:void(0);">
+                            카드취소
+                        </a>
+                    </li>
+                    <li>
+                        <a class="shape-md cash_payment" href="javascript:void(0);">
+                            <img src="../assets/images/ico_cash2.svg" alt="">
+                            <span>현금</span>
+                        </a>
+                        <a class="shape-md card_handwriting" href="javascript:void(0);">
+                            카드 수기 입력
+                        </a>
+                    </li>
+                    <li>
+                        <a class="shape-md mileage-pay" href="javascript:void(0);">
+                            <img src="../assets/images/ico_savings2.svg" alt="">
+                            <span>마일리지</span>
+                        </a>
+                        <a class="shape-md cash_receipt_approval" href="javascript:void(0);">
+                            현금영수증 승인
+                        </a>
+                    </li>
+                    <li>
+                        <a class="shape-md enuri" href="javascript:void(0);">
+                            <img src="../assets/images/ico_discount2.svg" alt="">
+                            <span>에누리</span>
+                        </a>
+                        <a class="shape-md cash_receipt_cancel" href="javascript:void(0);">
+                            현금영수증 취소
+                        </a>
+                    </li>
+                </ul>
+            </div>
+            <div class="payment-detail">
+                <div class="tit-wrap">
+                    <h2 class="tit-36">결제내역</h2>
+                    <button class="btn btn-md btn-tonal">
+                        <img src="../assets/images/ico_delete_tonal.svg" alt="">
+                        결제정보 삭제
+                    </button>
+                </div>
+                <div class="box-basic shape-md p24">
+                    <div class="table-container col4">
+                        <table class="table-basic size-md table-fixed2 table-selectable">
+                            <!-- <colgroup>
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="10%">
+                                <col width="50%">
+                                <col width="10%">
+                                <col width="10%">
+                            </colgroup> -->
+                            <thead>
+                                <tr>
+                                    <th>명세순번</th>
+                                    <th>상세구분</th>
+                                    <th>카드사코드</th>
+                                    <th>비고</th>
+                                    <th>승인번호</th>
+                                    <th>승인금액</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                             
+                                <tr>
+                                    <td>00001</td>
+                                    <td>에누리</td>
+                                    <td>에누리</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>5,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>00002</td>
+                                    <td>카드</td>
+                                    <td>00000000</td>
+                                    <td></td>
+                                    <td>12345678</td>
+                                    <td>100,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>00003</td>
+                                    <td>프로모션 할인</td>
+                                    <td>프로모션 할인</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>3,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>00004</td>
+                                    <td>마일리지</td>
+                                    <td>마일리지</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1,000원</td>
+                                </tr>
+                                <tr>
+                                    <td>00004</td>
+                                    <td>마일리지</td>
+                                    <td>마일리지</td>
+                                    <td></td>
+                                    <td></td>
+                                    <td>1,000원</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>합계</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>109,000원</th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        
+            
+            
+        </div>
+        <div class="right_content">
+            <div class="tit-wrap">
+                <div class="tit-36">결제정보</div>
+            </div>
+            <div class="payment-receipt">
+                <div>
+                    <div class="row">
+                        <p class="txt-24">판매금액</h2>
+                        <p class="txt-24">318,000원</p>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">TAG 금액</span>
+                        <span class="txt-16">318,000원</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <p class="txt-18">결제 금액</h2>
+                        <p class="txt-18">100,000원</p>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">결제방법</span>
+                        <span class="txt-16">카드</span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">카드사코드</span>
+                        <span class="txt-16">000000000</span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">승인금액</span>
+                        <span class="txt-16">100,000원</span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">승인번호</span>
+                        <span class="txt-16">12345678</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <p class="txt-18">총 할인금액</h2>
+                        <p class="txt-18"><b>8,000원</b></p>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">프로모션 할인 금액</span>
+                        <span class="txt-16">3,000</span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">에누리 금액</span>
+                        <span class="txt-16">5,000</span>
+                    </div>
+                </div>
+                <div>
+                    <div class="row">
+                        <p class="txt-18">사용 마일리지</h2>
+                        <p class="txt-18"><b>1,000원</b></p>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">마일리지 적용 대상</span>
+                        <span class="txt-16">318,000원</span>
+                    </div>
+                    <div class="row">
+                        <span class="txt-16">가용 마일리지(20,000점 이상)</span>
+                        <span class="txt-16">61,000</span>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="row">
+                <div class="txt-24">결제잔액</div>
+                <div class="txt-24 payment-receipt">209,000</div>
+            </div>
+        </div>
+    </main>
+    <!-- ========== 카드 결제 팝업 ========== -->
+    <div class="layer-wrap card_payment" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">카드결제</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group select">
+                            <label for="installment-select" class="input-group-label">할부</label>
+                            <select name="installment" id="installment-select">
+                                <option value="">일시불</option>
+                                <option value="">1개월</option>
+                                <option value="">2개월</option>
+                                <option value="">3개월</option>
+                                <option value="">4개월</option>
+                                <option value="">5개월</option>
+                                <option value="">6개월</option>
+                                <option value="">7개월</option>
+                            </select>
+                        </div>
+                        <div class="input-group signature">
+                            <div class="btn-area">
+                                <label for="signature" class="input-group-label">서명</label>
+                                <a class="btn btn-sm btn-text txt-error">지우기</a>
+                            </div>
+                            <textarea name="" id="signature"></textarea>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>결제하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 카드 취소 팝업 ========== -->
+    <div class="layer-wrap card_cancel" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">카드취소</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group select">
+                            <label for="installment-select" class="input-group-label">할부</label>
+                            <select name="installment" id="installment-select">
+                                <option value="">일시불</option>
+                                <option value="">1개월</option>
+                                <option value="">2개월</option>
+                                <option value="">3개월</option>
+                                <option value="">4개월</option>
+                                <option value="">5개월</option>
+                                <option value="">6개월</option>
+                                <option value="">7개월</option>
+                            </select>
+                        </div>
+                        <div class="input-group signature">
+                            <div class="btn-area">
+                                <label for="signature-area" class="input-group-label">서명</label>
+                                <a class="btn btn-sm btn-text txt-error">지우기</a>
+                            </div>
+                            <textarea name="" id="signature-area"></textarea>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>카드취소</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 현금 결제 팝업 ========== -->
+    <div class="layer-wrap cash_payment" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">현금 결제</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="receive-amount" class="input-group-label">받은금액</label>
+                            <input type="text" class="input-md txt-align-right" id="receive-amount"  placeholder="받은 금액을 입력하세요">
+                        </div>
+                        <div class="input-group">
+                            <label for="remain-amount" class="input-group-label">잔액</label>
+                            <input type="text" class="input-md txt-align-right" id="remain-amount"  value="318,000" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="change-amount" class="input-group-label">거스름돈</label>
+                            <input type="text" class="input-md txt-align-right" id="change-amount"  value="0" readonly>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>결제하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 카드 수기 입력 팝업 ========== -->
+    <div class="layer-wrap card_handwriting" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">카드 수기 입력</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="card-number" class="input-group-label">카드번호</label>
+                            <input type="text" class="input-md" id="card-number"  placeholder="카드번호를 입력하세요">
+                        </div>
+                        <div class="input-group select">
+                            <label for="installment-select" class="input-group-label">할부</label>
+                            <select name="installment" id="installment-select">
+                                <option value="">일시불</option>
+                                <option value="">1개월</option>
+                                <option value="">2개월</option>
+                                <option value="">3개월</option>
+                                <option value="">4개월</option>
+                                <option value="">5개월</option>
+                                <option value="">6개월</option>
+                                <option value="">7개월</option>
+                            </select>
+                        </div>
+                        <div class="input-group">
+                            <label for="approval-number" class="input-group-label">승인번호</label>
+                            <input type="text" class="input-md" id="approval-number"  placeholder="승인번호를 입력하세요">
+                        </div>
+                        <div class="input-group search">
+                            <label for="card-code" class="input-group-label">카드사코드</label>
+                            <input type="text" class="input-md" placeholder="카드사 코드를 입력하세요">
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>카드취소</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 현금영수증 승인 팝업 ========== -->
+    <div class="layer-wrap cash_receipt_approval" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">현금영수증 승인</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="cash-amount" class="input-group-label">현금 금액</label>
+                            <input type="text" class="input-md txt-align-right" id="cash-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="cash-receipt-number" class="input-group-label">현금 영수증 번호</label>
+                            <div class="segment-container">
+                                <div class="segment-wrap segment-xsm">
+                                    <button class="segment-btn active"><img src="../assets/images/ico_check.svg">개인용</button>
+                                    <button class="segment-btn"><img src="../assets/images/ico_check.svg">법인용</button>
+                                    <button class="segment-btn"><img src="../assets/images/ico_check.svg">자진발급</button>
+                                    <div class="slide-wrap">
+                                        <div class="slide"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" class="input-md" id="cash-receipt-number"  placeholder="휴대폰번호 또는 사업자번호">
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>승인하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 마일리지 팝업 ========== -->
+    <div class="layer-wrap mileage-pay" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">마일리지</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="available-mileage" class="input-group-label">가용 마일리지</label>
+                            <input type="text" class="input-md txt-align-right" id="available-mileage"  value="30,000" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="use-mileage" class="input-group-label txt-error">사용 마일리지</label>
+                            <input type="text" class="input-md txt-align-right" id="use-mileage"  value="-3,000" >
+                        </div>
+                        <div class="input-group">
+                            <label for="remain-mileage" class="input-group-label">잔여 마일리지</label>
+                            <input type="text" class="input-md txt-align-right" id="remain-mileage" value="27,000"  readonly>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>사용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 에누리 팝업 ========== -->
+    <div class="layer-wrap enuri" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">에누리</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-rate" class="input-group-label txt-error">할인율(%)</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-rate"  value="30" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-amount" class="input-group-label txt-error">할인금액</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-amount"  value="31,600" >
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 현금영수증 취소 팝업 ========== -->
+    <div class="layer-wrap cash_receipt_cancel" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">현금영수증 취소</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="cash-amount" class="input-group-label">현금금액</label>
+                            <input type="text" class="input-md txt-align-right" id="cash-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="cash-receipt-number" class="input-group-label">현금 영수증 번호</label>
+                            <div class="segment-container">
+                                <div class="segment-wrap segment-xsm">
+                                    <button class="segment-btn active"><img src="../assets/images/ico_check.svg">개인용</button>
+                                    <button class="segment-btn"><img src="../assets/images/ico_check.svg">법인용</button>
+                                    <button class="segment-btn"><img src="../assets/images/ico_check.svg">자진발급</button>
+                                    <div class="slide-wrap">
+                                        <div class="slide"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            
+                            <input type="text" class="input-md" id="cash-receipt-number"  value="010-1245-4567">
+                        </div>
+                        <div class="input-group">
+                            <label for="appr-number" class="input-group-label">원승인번호</label>
+                            <input type="text" class="input-md" id="appr-number"  value="023113222" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="appr-date" class="input-group-label">원승인일자</label>
+                            <input type="text" class="input-md" id="appr-date"  value="180730170348" readonly>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>승인 취소</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+  
+    
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js" integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/index.js"></script>
+</body>
+
+</html>

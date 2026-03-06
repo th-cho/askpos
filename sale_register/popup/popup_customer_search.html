@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>적립 고객 검색</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 적립 고객 검색 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-md" style="display: block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">적립 고객 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="고객명, 고객번호, 휴대폰번호, 이메일 검색">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-fixed2 table-selectable" id="customerTbl">
+                                <tbody> 
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td>홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>고객 선택하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+    
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+    document.addEventListener('DOMContentLoaded', function() {
+        const customerTbl = document.getElementById('customerTbl');
+        const customerTblRows = customerTbl.getElementsByTagName('tr');
+
+        for (let i = 0; i < customerTblRows.length; i++) { // 첫 번째 행은 헤더이므로 제외
+            customerTblRows[i].addEventListener('click', function() {
+                // 이미 선택된 행이 있다면 선택 해제
+                const selected = customerTbl.querySelector('.selected');
+                if (selected) {
+                    selected.classList.remove('selected');
+                }
+
+                // 클릭한 행을 선택
+                this.classList.add('selected');
+            });
+        }
+    });
+
+
+
+
+
+
+    </script>
+</body>
+
+</html>

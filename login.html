@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/guide.css">
+    <link rel="stylesheet" href="./assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <title>Login</title>
+</head>
+
+<body>
+    <div class="login-wrap">
+        <div class="login-banner">
+            <div class="banner-slider">
+                <div class="banner-slide-track">
+                    <div class="banner-slide">
+                        <img src="./assets/images/login_banner.png" alt="배너 1">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./assets/images/login_banner2.png" alt="배너 2">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./assets/images/login_banner3.png" alt="배너 3">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./assets/images/login_banner4.png" alt="배너 4">
+                    </div>
+                    <div class="banner-slide">
+                        <img src="./assets/images/login_banner5.png" alt="배너 5">
+                    </div>
+                </div>
+                <div class="banner-dots">
+                    <span class="dot active"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                    <span class="dot"></span>
+                </div>
+            </div>
+        </div>
+        <div class="login-main">
+            <div class="login-main-inner">
+                <!-- login-header -->
+                <div class="login-header">
+                    <div class="login-logo">
+                        <img src="./assets/images/logo.png" alt="">
+                    </div>
+                    <h2>POS LOGIN</h2>
+                </div>
+                <!-- login-content -->
+                <div class="login-content">
+                    <div class="login-group">
+                        <div class="input-group">
+                            <div class="input-datepicker-wrap">
+                                <div class="tui-datepicker-input tui-datetime-input">
+                                    <input type="text" id="datepicker-input" class="input-md">
+                                </div>
+                                <div id="tui-date-wrap" class="tui-date-wrap"></div>
+                            </div>
+                        </div>
+                        <div class="input-group">
+                            <input type="text" class="input-md" placeholder="아이디">
+                        </div>
+                        <div class="input-group">
+                            <input type="password" class="input-md" placeholder="비밀번호">
+                        </div>
+                    </div>
+                    <div class="login-info">
+                        <div class="login-check">
+                            <div class="input-group checkbox">
+                                <label for="saveId" class="input-check">
+                                    <input type="checkbox" id="saveId" checked>
+                                    <span class="check_bg"></span>
+                                    <em>아이디 저장</em>
+                                </label>
+                            </div>
+                            <div class="login-register">
+                                <a href="javascript:void(0);">아이디/비밀번호 찾기</a>
+                                <a href="javascript:void(0);">회원가입</a>
+                            </div>
+                        </div>
+                        <div class="login-btn-wrap">
+                            <div class="compo-button">
+                                <button class="btn btn-xl btn-primary" onClick="location.href='sale_register/sale_register.html'">로그인</button>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <!-- login-footer -->
+                <div class="login-footer">
+                    <h2>고객센터 : 1544-7710</h2>
+                    <p>COPYRIGHT @ AMER SPORTS KOREA ALL RIGHTS RESERVED.</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="./assets/lib/tui-date-picker.min.js"></script>
+    <script src="./assets/js/index.js"></script>
+    <script>
+        (function () {
+            var current = 0;
+            var track = document.querySelector('.banner-slide-track');
+            var dots = document.querySelectorAll('.banner-dots .dot');
+            var total = dots.length;
+            var timer;
+
+            function goTo(idx) {
+                current = (idx + total) % total;
+                track.style.transform = 'translateX(-' + (current * 100) + '%)';
+                dots.forEach(function (d, i) {
+                    d.classList.toggle('active', i === current);
+                });
+            }
+
+            dots.forEach(function (dot, i) {
+                dot.addEventListener('click', function () {
+                    clearInterval(timer);
+                    goTo(i);
+                    timer = setInterval(function () { goTo(current + 1); }, 4000);
+                });
+            });
+
+            timer = setInterval(function () { goTo(current + 1); }, 4000);
+        })();
+    </script>
+</body>
+
+</html>

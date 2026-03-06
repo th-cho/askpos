@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>카드 취소</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 카드 취소 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-sm" style="display: block;;">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">카드취소</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group select">
+                            <label for="installment-select" class="input-group-label">할부</label>
+                            <select name="installment" id="installment-select">
+                                <option value="">일시불</option>
+                                <option value="">1개월</option>
+                                <option value="">2개월</option>
+                                <option value="">3개월</option>
+                                <option value="">4개월</option>
+                                <option value="">5개월</option>
+                                <option value="">6개월</option>
+                                <option value="">7개월</option>
+                            </select>
+                        </div>
+                        <div class="input-group signature">
+                            <div class="btn-area">
+                                <label for="signature-area" class="input-group-label">서명</label>
+                                <a class="btn btn-sm btn-text txt-error">지우기</a>
+                            </div>
+                            <textarea name="" id="signature-area"></textarea>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>카드취소</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script> 
+    </script>
+</body>
+
+</html>

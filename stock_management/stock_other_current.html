@@ -1,0 +1,690 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>타매장재고현황</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">재고관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">타매장재고현황</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">타매장재고현황</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                        <img src="../assets/images/ico_download.svg" alt="">
+                        <span>엑셀</span>
+                    </button>
+                    <button class="btn btn-md btn-outline refresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-outline message-btn">
+                        <img src="../assets/images/ico_message.svg" alt="">
+                        <span>쪽지</span>
+                    </button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="search-options">
+                    <div class="input-group search w424">
+                        <p class="label-text">매장코드</p>
+                        <input type="text" class="input-md" placeholder="매장검색">
+                    </div>
+                    <div class="input-group select w200">
+                        <p class="label-text">매장구분</p>
+                        <select>
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-group select w200">
+                        <p class="label-text">지역구분</p>
+                        <select>
+                            <option value="">전체</option>
+                            <option value=""></option>
+                        </select>
+                    </div>
+                    <div class="input-group search w424">
+                        <p class="label-text">상대매장</p>
+                        <input type="text" class="input-md" placeholder="상대매장">
+                    </div>
+                </div>
+                <button class="btn-search-detail" id="toggleSearchDetail">
+                    <span>상세검색</span>
+                    <img src="../assets/images/depth_arrow.svg" alt="" class="detail-arrow">
+                </button>
+                <div class="search-detail-wrap" id="searchDetailWrap">
+                    <div class="search-options">
+                        <div class="input-group search col">
+                            <p class="label-text">바코드입력</p>
+                            <div>
+                                <input type="text" class="input-md w424" placeholder="바코드 입력">
+                                <span>바코드입력이 가능합니다.</span>
+                            </div>
+                        </div>
+                        <div class="input-group-wrap">
+                            <div class="input-group checkbox">
+                                <p class="label-text">당매장재고포함</p>
+                                <div class="input-check-and-radio">
+                                    <label for="checkMail" class="input-check">
+                                        <input type="checkbox" id="checkMail">
+                                        <span class="check_bg"></span>
+                                        <em>포함</em>
+                                    </label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24 space-between">
+                    <div class="tit-wrap-left">
+                        <div class="tit-wrap-bar"></div>
+                        <div class="tit-24">매장재고현황</div>
+                        <div class="badge hide">
+                            <span>가용재고 기준</span>
+                        </div>
+                    </div>
+                </div>
+                <div class="table-container col4">
+                    <table class="table-basic size-md table-fixed2 table-selectable">
+                        <!-- <colgroup>
+                            <col width="10%">
+                            <col width="30%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="5%">
+                            <col width="10%">
+                            <col width="10%">
+                            <col width="10%">
+                        </colgroup> -->
+
+                        <thead>
+                            <tr>
+                                <th>매장구분</th>
+                                <th>지역구분</th>
+                                <th>매장코드</th>
+                                <th>매장명</th>
+                                <th>연락처</th>
+                                <th>상품코드</th>
+                                <th>상품명</th>
+                                <th>색상</th>
+                                <th>색상명</th>
+                                <th>합계수량</th>
+                                <th>수량1</th>
+                                <th>수량2</th>
+                                <th>수량3</th>
+                                <th>수량4</th>
+                                <th>수량5</th>
+                                <th>수량6</th>
+                                <th>수량7</th>
+                                <th>수량8</th>
+                                <th>수량9</th>
+                                <th>수량10</th>
+                                <th>수량11</th>
+                                <th>수량12</th>
+                                <th>수량13</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                            <tr>
+                                <td>직영점 DC</td>
+                                <td>경기</td>
+                                <td>DBZ0111</td>
+                                <td>살로몬 성수 직영점(플래그십 스토어)</td>
+                                <td>010-****-5555</td>
+                                <td>TA20BBBRW-60</td>
+                                <td>FW17 WINTER PLAY Mens DW</td>
+                                <td>**</td>
+                                <td>**</td>
+                                <td>23</td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                                <td></td>
+                            </tr>
+                        </tbody>
+                        <tfoot>
+                            <tr>
+                                <th>합계</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th>100</th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                                <th></th>
+                            </tr>
+                        </tfoot>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+    <!-- ========== 실사일자 팝업 ========== -->
+    <div class="layer-wrap pop-due-diligence" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">실사일자</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="실사일자">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <!-- <colgroup>
+                                    <col width="30%">
+                                    <col width="70%">
+                                </colgroup> -->
+
+                                <thead>
+                                    <tr>
+                                        <th>실사일자</th>
+                                        <th>매장명</th>
+                                        <th>실사구분</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>2024-07-24</td>
+                                        <td>현대프리미엄아울렛 송도점</td>
+                                        <td>실사</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button"
+                                class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button"
+                                class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <!-- ========== 재고실사일자 팝업 ========== -->
+    <div class="layer-wrap pop-stock-due-diligence" id="popup-sample-sm">
+        <div class="layer-pop">
+            <div class="layer-inner layer-sm">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">재고실사일자</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group date">
+                            <p class="label-text">실사일자입력</p>
+                            <div class="input-datepicker-wrap">
+                                <div class="tui-datepicker-input tui-datetime-input">
+                                    <input type="text" id="datepicker-input" class="input-md">
+                                </div>
+                                <div id="tui-date-wrap" class="tui-date-wrap">
+                                    <div class="tui-datepicker tui-hidden">
+                                        <div class="tui-datepicker-body tui-datepicker-type-date">
+                                            <div class="tui-calendar-container">
+                                                <div class="tui-calendar">
+                                                    <div class="tui-calendar-header">
+                                                        <div class="tui-calendar-header-inner"> <button
+                                                                class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                month</button> <em
+                                                                class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                            <button
+                                                                class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                month</button> </div>
+                                                        <div class="tui-calendar-header-info">
+                                                            <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)</p>
+                                                        </div>
+                                                    </div>
+                                                    <div class="tui-calendar-body">
+                                                        <table class="tui-calendar-body-inner" cellspacing="0"
+                                                            cellpadding="0">
+                                                            <caption><span>Dates</span></caption>
+                                                            <thead class="tui-calendar-body-header">
+                                                                <tr>
+                                                                    <th class="tui-sun" scope="col">일</th>
+                                                                    <th scope="col">월</th>
+                                                                    <th scope="col">화</th>
+                                                                    <th scope="col">수</th>
+                                                                    <th scope="col">목</th>
+                                                                    <th scope="col">금</th>
+                                                                    <th class="tui-sat" scope="col">토</th>
+                                                                </tr>
+                                                            </thead>
+                                                            <tbody>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1719673200000">30</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1719759600000">1</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1719846000000">2</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1719932400000">3</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720018800000">4</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720105200000">5</td>
+                                                                    <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1720191600000">6</td>
+                                                                </tr>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1720278000000">7</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720364400000">8</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720450800000">9</td>
+                                                                    <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                        data-timestamp="1720537200000">10</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720623600000">11</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720710000000">12</td>
+                                                                    <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1720796400000">13</td>
+                                                                </tr>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1720882800000">14</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1720969200000">15</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721055600000">16</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721142000000">17</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721228400000">18</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721314800000">19</td>
+                                                                    <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1721401200000">20</td>
+                                                                </tr>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1721487600000">21</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721574000000">22</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721660400000">23</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721746800000">24</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721833200000">25</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1721919600000">26</td>
+                                                                    <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1722006000000">27</td>
+                                                                </tr>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1722092400000">28</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1722178800000">29</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1722265200000">30</td>
+                                                                    <td class="tui-calendar-date tui-is-selectable"
+                                                                        data-timestamp="1722351600000">31</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1722438000000">1</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1722524400000">2</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1722610800000">3</td>
+                                                                </tr>
+                                                                <tr class="tui-calendar-week">
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                        data-timestamp="1722697200000">4</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1722783600000">5</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1722870000000">6</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1722956400000">7</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1723042800000">8</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                        data-timestamp="1723129200000">9</td>
+                                                                    <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                        data-timestamp="1723215600000">10</td>
+                                                                </tr>
+                                                            </tbody>
+                                                        </table>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button"
+                                class="btn btn-md btn-text ui-close-pop grow1"><span>취소</span></button>
+                            <button type="button"
+                                class="btn btn-md btn-primary ui-close-pop grow1"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach((el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[6].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[5].classList.add('active');
+            const depth3 = depth2[5].querySelectorAll('li > a');
+            depth3[2].classList.add('active');
+
+            // 상세검색 토글
+            const toggleBtn = document.getElementById('toggleSearchDetail');
+            const detailWrap = document.getElementById('searchDetailWrap');
+            toggleBtn.addEventListener('click', () => {
+                const isOpen = detailWrap.classList.toggle('open');
+                toggleBtn.classList.toggle('open', isOpen);
+            });
+        })
+
+    </script>
+</body>
+
+</html>

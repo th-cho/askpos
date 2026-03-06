@@ -1,0 +1,173 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>수리등록(CBC)_접수매장</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 수리/매장정보 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-lg" style="display: block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">판매정보</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group select w140">
+                                <select>
+                                    <option value="">매장구분</option>
+                                </select>
+                            </div>
+                            <div class="input-group select w140">
+                                <select>
+                                    <option value="">지역구분</option>
+                                </select>
+                            </div>
+                            <div class="input-group select w160">
+                                <select>
+                                    <option value="">매장브랜드</option>
+                                </select>
+                            </div>
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="접수매장">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="table-container">
+                            <table class="table-basic size-md table-fixed2 table-selectable">
+                                <colgroup>
+                                    <!-- <col width="10%">
+                                    <col width="30%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="5%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">  -->
+                                </colgroup>
+    
+                                <thead>
+                                    <tr>
+                                        <th>매장코드</th>
+                                        <th>매장명</th>
+                                        <th>매장구분</th>
+                                        <th>지역구분</th>
+                                        <th>매장브랜드</th>
+                                        <th>창고코드</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr>
+                                        <td>AS</td>
+                                        <td>A/S 클럽</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820000</td>
+                                        <td>피지스포츠</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820101</td>
+                                        <td>윈스포츠</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820103</td>
+                                        <td>조이인터내셔날</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820104</td>
+                                        <td>스파밸리골프백화점</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>AS</td>
+                                        <td>A/S 클럽</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820000</td>
+                                        <td>피지스포츠</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820101</td>
+                                        <td>윈스포츠</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820103</td>
+                                        <td>조이인터내셔날</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                    <tr>
+                                        <td>820104</td>
+                                        <td>스파밸리골프백화점</td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                        <td></td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+</body>
+
+</html>

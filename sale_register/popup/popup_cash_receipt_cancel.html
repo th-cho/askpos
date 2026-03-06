@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>현금영수증 취소</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 현금영수증 취소 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-sm" style="display: block;;">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">현금영수증 취소</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="cash-amount" class="input-group-label">현금금액</label>
+                            <input type="text" class="input-md txt-align-right" id="cash-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="cash-receipt-number" class="input-group-label">현금 영수증 번호</label>
+                            <div class="segment-container">
+                                <div class="segment-wrap segment-xsm">
+                                    <button class="segment-btn active"><img src="../../assets/images/ico_check.svg">개인용</button>
+                                    <button class="segment-btn"><img src="../../assets/images/ico_check.svg">법인용</button>
+                                    <button class="segment-btn"><img src="../../assets/images/ico_check.svg">자진발급</button>
+                                    <div class="slide-wrap" style="left: 5px; width: 79px; height: 26px;">
+                                        <div class="slide"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <input type="text" class="input-md" id="cash-receipt-number"  value="010-1245-4567">
+                        </div>
+                        <div class="input-group">
+                            <label for="appr-number" class="input-group-label">원승인번호</label>
+                            <input type="text" class="input-md" id="appr-number"  value="023113222" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="appr-date" class="input-group-label">원승인일자</label>
+                            <input type="text" class="input-md" id="appr-date"  value="180730170348" readonly>
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>승인 취소</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+    
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+ 
+    </script>
+</body>
+
+</html>

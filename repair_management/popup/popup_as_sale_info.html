@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AS번호정보_판매정보조회</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/main.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== AS 판매정보 조회 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-lg" style="display: block;">
+        <div class="layer-pop">
+            <div class="layer-inner layer-lg">
+                <div class="layer-head with-btn">
+                    <h4 class="layer-title">판매정보</h4>
+
+                    <div class="button-group">
+                        <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                            <img src="../../assets/images/ico_download.svg" alt="">
+                            <span>엑셀</span>
+                        </button>
+                        <button class="btn btn-md btn-outline refresh-btn">
+                            <img src="../../assets/images/ico_refresh.svg" alt="">
+                            <span>초기화</span>
+                        </button>
+                        <button class="btn btn-md btn-tonal">적용</button>
+                    </div>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <span style="margin: 0 -8px;">~</span>
+                            <div class="input-group date">
+                                <div class="input-datepicker-wrap">
+                                    <div class="tui-datepicker-input tui-datetime-input">
+                                        <input type="text" id="datepicker-input2" class="input-md">
+                                    </div>
+                                    <div id="tui-date-wrap2" class="tui-date-wrap">
+                                        <div class="tui-datepicker tui-hidden">
+                                            <div class="tui-datepicker-body tui-datepicker-type-date">
+                                                <div class="tui-calendar-container">
+                                                    <div class="tui-calendar">
+                                                        <div class="tui-calendar-header">
+                                                            <div class="tui-calendar-header-inner"> <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-prev-month">Prev
+                                                                    month</button> <em
+                                                                    class="tui-calendar-title tui-calendar-title-month">2024.07</em>
+                                                                <button
+                                                                    class="tui-calendar-btn tui-calendar-btn-next-month">Next
+                                                                    month</button> </div>
+                                                            <div class="tui-calendar-header-info">
+                                                                <p class="tui-calendar-title-today">오늘: 2024.07.10 (수)
+                                                                </p>
+                                                            </div>
+                                                        </div>
+                                                        <div class="tui-calendar-body">
+                                                            <table class="tui-calendar-body-inner" cellspacing="0"
+                                                                cellpadding="0">
+                                                                <caption><span>Dates</span></caption>
+                                                                <thead class="tui-calendar-body-header">
+                                                                    <tr>
+                                                                        <th class="tui-sun" scope="col">일</th>
+                                                                        <th scope="col">월</th>
+                                                                        <th scope="col">화</th>
+                                                                        <th scope="col">수</th>
+                                                                        <th scope="col">목</th>
+                                                                        <th scope="col">금</th>
+                                                                        <th class="tui-sat" scope="col">토</th>
+                                                                    </tr>
+                                                                </thead>
+                                                                <tbody>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-prev-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1719673200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719759600000">1</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719846000000">2</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1719932400000">3</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720018800000">4</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720105200000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720191600000">6</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720278000000">7</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720364400000">8</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720450800000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-today tui-is-selectable tui-is-selected"
+                                                                            data-timestamp="1720537200000">10</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720623600000">11</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720710000000">12</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1720796400000">13</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1720882800000">14</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1720969200000">15</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721055600000">16</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721142000000">17</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721228400000">18</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721314800000">19</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1721401200000">20</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1721487600000">21</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721574000000">22</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721660400000">23</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721746800000">24</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721833200000">25</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1721919600000">26</td>
+                                                                        <td class="tui-calendar-date tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722006000000">27</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722092400000">28</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722178800000">29</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722265200000">30</td>
+                                                                        <td class="tui-calendar-date tui-is-selectable"
+                                                                            data-timestamp="1722351600000">31</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722438000000">1</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722524400000">2</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1722610800000">3</td>
+                                                                    </tr>
+                                                                    <tr class="tui-calendar-week">
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sun tui-is-selectable"
+                                                                            data-timestamp="1722697200000">4</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722783600000">5</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722870000000">6</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1722956400000">7</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723042800000">8</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-is-selectable"
+                                                                            data-timestamp="1723129200000">9</td>
+                                                                        <td class="tui-calendar-date tui-calendar-next-month tui-calendar-sat tui-is-selectable"
+                                                                            data-timestamp="1723215600000">10</td>
+                                                                    </tr>
+                                                                </tbody>
+                                                            </table>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="판매번호">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="receipt-tbl-wrapper">
+                            <table class="table-basic size-md table-selectable fold-table table-fixed with-tfoot"
+                                id="receiptTbl">
+                                <!-- <colgroup>
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="10%">
+                                    <col width="15%">
+                                    <col width="15%">
+                                    <col width="20%">
+                                    <col width="20%">
+                                </colgroup> -->
+                                <thead>
+                                    <tr>
+                                        <th>판매일자</th>
+                                        <th>판매번호</th>
+                                        <th>매장코드</th>
+                                        <th>매장명</th>
+                                        <th>판매수량</th>
+                                        <th>판매금액</th>
+                                        <th>고객번호</th>
+                                    </tr>
+                                </thead>
+                                <tbody>
+                                    <tr class="view">
+                                        <td>2024-06-18</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td>CFA0027</td>
+                                        <td>Wilson 롯데백화점 대구점</td>
+                                        <td>1</td>
+                                        <td>157,080</td>
+                                        <td>F20191200189</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>금액 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션할인</th>
+                                                            <th>발생마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>157,080</td>
+                                                            <td>107,080</td>
+                                                            <td>20,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>1</th>
+                                                            <th>45,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>70,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>2024-06-18</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td>CFA0027</td>
+                                        <td>Wilson 롯데백화점 대구점</td>
+                                        <td>1</td>
+                                        <td>157,080</td>
+                                        <td>F20191200189</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>금액 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션할인</th>
+                                                            <th>발생마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>157,080</td>
+                                                            <td>107,080</td>
+                                                            <td>20,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>1</th>
+                                                            <th>45,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>70,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+                                    <tr class="view">
+                                        <td>2024-06-18</td>
+                                        <td>20240618TEMP0001</td>
+                                        <td>CFA0027</td>
+                                        <td>Wilson 롯데백화점 대구점</td>
+                                        <td>1</td>
+                                        <td>157,080</td>
+                                        <td>F20191200189</td>
+                                    </tr>
+                                    <tr class="fold">
+                                        <td colspan="4">
+                                            <div class="fold-content">
+                                                <h4>금액 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>확정금액</th>
+                                                            <th>현금금액</th>
+                                                            <th>카드금액</th>
+                                                            <th>에누리금액</th>
+                                                            <th>프로모션할인</th>
+                                                            <th>발생마일리지</th>
+                                                            <th>할인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>157,080</td>
+                                                            <td>107,080</td>
+                                                            <td>20,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                            <td></td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                </table>
+                                                <h4>매출 상세정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>판매구분</th>
+                                                            <th>상품구분</th>
+                                                            <th>상품코드</th>
+                                                            <th>상품명</th>
+                                                            <th>색상</th>
+                                                            <th>규격</th>
+                                                            <th>판매수량</th>
+                                                            <th>판매금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>A (판매)</td>
+                                                            <td>02(어패럴)</td>
+                                                            <td>TEPMD4412</td>
+                                                            <td>Salomon NXT Extreme</td>
+                                                            <td>RED</td>
+                                                            <td>064</td>
+                                                            <td>1</td>
+                                                            <td>45,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>1</th>
+                                                            <th>45,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                                <h4>판매 결제정보</h4>
+                                                <table class="table-basic size-sm">
+                                                    <thead>
+                                                        <tr>
+                                                            <th>명세순번</th>
+                                                            <th>상세구분</th>
+                                                            <th>카드사코드</th>
+                                                            <th>승인금액</th>
+                                                        </tr>
+                                                    </thead>
+                                                    <tbody>
+                                                        <tr>
+                                                            <td>00001</td>
+                                                            <td>할인금액</td>
+                                                            <td>할인금액</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00002</td>
+                                                            <td>에누리</td>
+                                                            <td>에누리</td>
+                                                            <td>5,000</td>
+                                                        </tr>
+                                                        <tr>
+                                                            <td>00003</td>
+                                                            <td>마일리지</td>
+                                                            <td>마일리지</td>
+                                                            <td>10,000</td>
+                                                        </tr>
+                                                    </tbody>
+                                                    <tfoot>
+                                                        <tr>
+                                                            <th>합계</th>
+                                                            <th></th>
+                                                            <th></th>
+                                                            <th>70,000</th>
+                                                        </tr>
+                                                    </tfoot>
+                                                </table>
+                                            </div>
+                                        </td>
+                                    </tr>
+
+                                </tbody>
+                                <tfoot>
+                                    <tr>
+                                        <th>합계</th>
+                                        <th></th>
+                                        <th></th>
+                                        <th></th>
+                                        <th>3</th>
+                                        <th>471,240</th>
+                                        <th></th>
+                                    </tr>
+                                </tfoot>
+                            </table>
+                        </div>
+
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>닫기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+</body>
+
+</html>

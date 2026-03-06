@@ -1,0 +1,523 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../assets/css/common.css">
+    <link rel="stylesheet" href="../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../assets/css/popup.css">
+    <link rel="stylesheet" href="../assets/css/guide.css">
+    <link rel="stylesheet" href="../assets/css/main.css">
+    <title>고객조회</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <ul class="breadcrumb">
+                <li>
+                    <a href="javascript:void(0);">홈</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">고객관리</a>
+                </li>
+                <li>
+                    <a href="javascript:void(0);">고객조회</a>
+                </li>
+            </ul>
+            <div class="row">
+                <h2 class="tit-36">고객조회</h2>
+                <div class="button-group">
+                    <button class="btn btn-md btn-outline txt-success-dark excel-btn">
+                        <img src="../assets/images/ico_download.svg" alt="">
+                        <span>엑셀</span>
+                    </button>
+                    <button class="btn btn-md btn-outline refresh-btn">
+                        <img src="../assets/images/ico_refresh.svg" alt="">
+                        <span>초기화</span>
+                    </button>
+                    <button class="btn btn-md btn-primary"><img src="../assets/images/ico_search.svg" alt="" style="filter: brightness(0) invert(1);"><span>조회</span></button>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="search-options">
+                    <div class="input-group select w200">
+                        <p class="label-text">브랜드</p>
+                        <select>
+                            <option value="">S (Salomon)</option>
+                            <option value="">Cookie</option>
+                        </select>
+                    </div>
+                    <div class="input-group search w400">
+                        <p class="label-text">고객번호</p>
+                        <input type="text" class="input-md customer_search" placeholder="고객 검색">
+                    </div>
+                </div>
+            </div>
+            <div class="box-basic shape-md p32">
+                <div class="tit-wrap mb24">
+                    <div class="tit-wrap-bar"></div>
+                    <div class="tit-24">고객정보</div>
+                </div>
+                <div class="table-container col4">
+                    <table class="table-basic size-md table-fixed2 table-selectable border-none">
+                        <thead>
+                            <tr>
+                                <th>고객번호</th>
+                                <th>고객명</th>
+                                <th>이메일</th>
+                                <th>휴대폰번호</th>
+                                <th>주소</th>
+                                <th>관리매장명</th>
+                                <th>적립마일리지</th>
+                                <th>특별마일리지</th>
+                                <th>사용마일리지</th>
+                                <th>가용마일리지</th>
+                                <th>POS가입일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                            <tr>
+                                <td>20191001946</td>
+                                <td>홍*동</td>
+                                <td>****@naver.com</td>
+                                <td>010-0000-0000</td>
+                                <td>서울 성동구 성수동 123-4</td>
+                                <td>성수점</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>15,000</td>
+                                <td>25,000</td>
+                                <td>2020-07-19</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+            <div class="box-in-content row grow1">
+                <div class="box-in-content-left box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-wrap-bar"></div>
+                        <div class="tit-24">마일리지내역</div>
+                    </div>
+                    <div class="table-container col4">
+                        <table class="table-basic size-md table-fixed2 table-selectable border-none">
+                            <!-- <colgroup>
+                                <col width="30%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="25%">
+                            </colgroup> -->
+                            <thead>
+                                <tr>
+                                    <th>적립일자</th>
+                                    <th>판매구분</th>
+                                    <th>마일리지종류</th>
+                                    <th>마일리지</th>
+                                    <th>비고</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                                <tr>
+                                    <td>2019-10-10</td>
+                                    <td>구분</td>
+                                    <td>정상적립</td>
+                                    <td>5,100</td>
+                                    <td></td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>합계</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>25,500</th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+                <div class="box-in-content-right box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-wrap-bar"></div>
+                        <div class="tit-24">구매내역</div>
+                    </div>
+                    <div class="table-container col4">
+                        <table class="table-basic size-md table-fixed2 table-selectable border-none">
+                            <!-- <colgroup>
+                                <col width="30%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="15%">
+                                <col width="25%">
+                            </colgroup> -->
+                            <thead>
+                                <tr>
+                                    <th>구매일자</th>
+                                    <th>구매매장</th>
+                                    <th>구매매장명</th>
+                                    <th>상품코드</th>
+                                    <th>상품명</th>
+                                    <th>색상명</th>
+                                    <th>규격</th>
+                                    <th>판매구분</th>
+                                    <th>판매형태</th>
+                                    <th>구매수량</th>
+                                    <th>구매금액</th>
+                                    <th>적립마일리지</th>
+                                    <th>사용마일리지</th>
+                                    <th>매입구분</th>
+                                </tr>
+                            </thead>
+                            <tbody>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                                <tr>
+                                    <td>2024-06-26</td>
+                                    <td>TEMP1</td>
+                                    <td>임시 배분용 매장1</td>
+                                    <td>1NTA-K</td>
+                                    <td>ACS NXT TOUR DZ</td>
+                                    <td>**</td>
+                                    <td>**</td>
+                                    <td>판매</td>
+                                    <td>정상</td>
+                                    <td>1</td>
+                                    <td>49,000</td>
+                                    <td>900</td>
+                                    <td></td>
+                                    <td>사입</td>
+                                </tr>
+                            </tbody>
+                            <tfoot>
+                                <tr>
+                                    <th>합계</th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th></th>
+                                    <th>5</th>
+                                    <th>1,160,600</th>
+                                    <th>48,700</th>
+                                    <th>38,000</th>
+                                    <th></th>
+                                </tr>
+                            </tfoot>
+                        </table>
+                    </div>
+                </div>
+            </div>
+        </div>
+        
+    </main>
+    <!-- ========== 고객 검색 팝업 ========== -->
+    <div class="layer-wrap pop-customer-search" id="popup-sample-md">
+        <div class="layer-pop">
+            <div class="layer-inner layer-md">
+                <div class="layer-head">
+                    <h4 class="layer-title">고객 검색</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="searchbar-wrap">
+                            <div class="input-group search">
+                                <input type="text" class="input-md" placeholder="고객명, 고객번호, 휴대폰번호, 이메일 검색">
+                            </div>
+                            <button class="btn btn-md btn-neutral refresh"><i class="ico_refresh"></i></button>
+                        </div>
+                        <div class="list-wrap scroll-y-wrap">
+                            <table class="table-basic size-md table-fixed2 table-selectable" id="employeeTbl">
+                                <tbody> 
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td class="txt-left">홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td class="txt-left">홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    <tr>
+                                        <td>20160000254</td>
+                                        <td class="txt-left">홍*동</td>
+                                        <td>010-****-1234</td>
+                                        <td>hong*****@gmail.com</td>
+                                    </tr>
+                                    
+                                </tbody>
+                            </table>
+                        </div>
+                        
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop grow1"><span>고객 선택하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach( (el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[2].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[1].classList.add('active');
+            const depth3 = depth2[1].querySelectorAll('li > a');
+            depth3[1].classList.add('active');
+        })
+        
+    </script>
+</body>
+
+</html>

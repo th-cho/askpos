@@ -1,0 +1,351 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./assets/css/common.css">
+    <link rel="stylesheet" href="./assets/css/guide.css">
+    <link rel="stylesheet" href="./assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="./assets/css/main.css">
+    <link rel="stylesheet" href="./assets/css/popup.css">
+    <title>인트로</title>
+</head>
+
+<body>
+    <header></header>
+    <main class="sale_current">
+        <div class="full_content">
+            <div class="box-in-content row">
+                <div class="box-in-content-grid7 box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-32">주간현황 </div>
+                    </div>
+                    <canvas id="barChart" style="width:100%;max-width:100%"></canvas>
+                </div>
+                <div class="box-in-content-grid5 box-basic shape-md p32">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-32">전일대비 할인율별 판매현황</div>
+                    </div>
+                    <canvas id="doughnutChart" style="width:100%;max-width:700px; max-height: 400px; margin-top: 15%;"></canvas>
+                </div>
+            </div>
+            <div class="box-in-content row">
+                <div class="box-in-content-right box-basic shape-md p24">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-24">
+                            메장 공지사항
+                        </div>
+                        <a href="javascript:void(0)" class="more_link"><img src="./assets/images/ico_forward.svg" alt=""></a>
+                    </div>
+                    <table class="table-basic size-md table-selectable border-none">
+                        <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>등록자</th>
+                                <th>등록일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>테스트 등록입니다.</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>타이틀리스트 어패럴 2월 수선비</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>2023 VM 3월 4주차 착장 안내 드립니다.</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>[필독] 하이퍼플렉스 우산 추가 출고의 건</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>[필독] 23년 S/S 유니폼 취합의 건(백화점/아울렛)</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-in-content-right box-basic shape-md p24">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-24">
+                            매장 게시판
+                        </div>
+                        <a href="javascript:void(0)" class="more_link"><img src="./assets/images/ico_forward.svg" alt=""></a>
+                    </div>
+                    <table class="table-basic size-md table-selectable border-none">
+                        <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>등록자</th>
+                                <th>등록일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>신경기 신주머니 3박스 부탁드려요</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>광주롯데~</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>현대 킨텍스 AS접수증, 선물교환증 신청합니다.</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>수원영통점 교환증, 티셔츠 폴리백 신청합니다.</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>현대 천호점 신발 주머니, 티 폴리백, 바지 폴리백</td>
+                                <td>홍길동</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+                <div class="box-in-content-right box-basic shape-md p24">
+                    <div class="tit-wrap mb24">
+                        <div class="tit-24">
+                            매장 제안방
+                        </div>
+                        <a href="javascript:void(0)" class="more_link"><img src="./assets/images/ico_forward.svg" alt=""></a>
+                    </div>
+                    <table class="table-basic size-md table-selectable border-none">
+                        <thead>
+                            <tr>
+                                <th>제목</th>
+                                <th>등록자</th>
+                                <th>등록일자</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            <tr>
+                                <td>사은품 양말 신청합니다.</td>
+                                <td>Wilson 신세..</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>롯데 대구점, 선물 교환권 부탁드려요</td>
+                                <td>Wilson 롯데..</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>마케팅 담당자님 확인부탁드립니다.</td>
+                                <td>Wilson 현대..</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>TKPWA5985제품 전체에 5985 가격택이 붙어있..</td>
+                                <td>Wilson 수원..</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                            <tr>
+                                <td>구미점 선물 교환증 부탁드립니다.</td>
+                                <td>Wilson 현대..</td>
+                                <td>2023-07-12</td>
+                            </tr>
+                        </tbody>
+                    </table>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!--chart js-->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+    <script src="../assets/lib/tui-date-picker.min.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"
+        integrity="sha256-/JqT3SQfawRcv/BIHPThkBvs0OEvtFFmqPF/lYI/Cxo=" crossorigin="anonymous"></script>
+    <script src="../assets/js/header.js"></script>
+    <script src="../assets/js/index.js"></script>
+    <script>
+        window.addEventListener("DOMContentLoaded", () => {
+            const depth = document.querySelectorAll('.depth1 > li > a');
+            depth.forEach((el, idx) => {
+                console.log(el);
+                el.classList.remove('active')
+                depth[6].classList.add('active-arrow')
+            })
+            const depth2 = document.querySelectorAll('.depth2');
+            depth2[5].classList.add('active');
+            const depth3 = depth2[5].querySelectorAll('li > a');
+            depth3[1].classList.add('active');
+        })
+
+
+        //chart.js 막대그래프
+        const ctx = document.getElementById('barChart');
+
+        // 그라데이션 생성 함수
+        function getGradient(ctx, chartArea) {
+            var gradient = ctx.createLinearGradient(0, chartArea.bottom, 0, chartArea.top);
+            gradient.addColorStop(1, '#000000');
+            gradient.addColorStop(0, '#ADADAD');
+            return gradient;
+        }
+
+
+        new Chart(ctx, {
+            type: 'bar',
+            data: {
+            labels: ['판매수량', '주문수량', 'RT출고미확정수량', '매장입고수량', '반품확정수량', '재고실사건수', 'AS접수건수'],
+            datasets: [{
+                label: '주간현황',
+                data: [1200, 400, 2877, 1771, 343, 1242, 43],
+                borderWidth: 0,
+                borderRadius: 4,
+                barThickness : 24,
+                backgroundColor: function(context) {
+                    var chart = context.chart;
+                    var {ctx, chartArea} = chart;
+
+                    // 차트 영역이 정의된 후 그라데이션을 생성합니다.
+                    if (!chartArea) {
+                        return null;
+                    }
+                    return getGradient(ctx, chartArea);
+                },
+            }],
+            },
+            options: {
+                scales: {
+                    y: {
+                        beginAtZero: true,
+                        grid : {
+                            color : '#F0F2F5'
+                        },
+                        ticks: {
+                            color: "#969CA1",
+                            font: {
+                                family : '"Noto Sans KR", sans-serif',
+                                size: 14 
+                            }
+                        }
+                    },
+                   x : {
+                     grid : {
+                        display : false
+                     },
+                     ticks: {
+                        color: "#4B4F53", 
+                        font: {
+                            family : '"Noto Sans KR", sans-serif',
+                            size: 14, 
+                            weight:'bold'
+                        }
+                    }
+                   },
+                },
+                plugins: {
+                    legend: {
+                        display:false,
+                    }
+                }
+            }
+        });
+
+         
+        
+        const ctx2 = document.getElementById('doughnutChart');
+        // 플러그인 정의
+        var totalPlugin = {
+            beforeDraw: function(chart) {
+                var width = chart.width,
+                    height = chart.height,
+                    ctx = chart.ctx;
+                ctx.restore();
+                
+                var total = chart.config.data.datasets[0].data.reduce((a, b) => a + b, 0);
+                var text ;
+                var lines = [
+                    { text: 'Total', fontSize: 16, fontFamily: 'Noto Sans KR', fontWeight: 'normal', color: '#222425' },
+                    { text: total, fontSize: 32, fontFamily: 'Noto Sans KR', fontWeight: 'bold', fontWeight:'bold', color: '#222425'}
+                    ];
+                var lineHeight = 40; // 줄 높이 설정
+
+                for (var i = 0; i < lines.length; i++) {
+                    var fontStyle = lines[i].fontWeight + ' ' + lines[i].fontSize + 'px ' + lines[i].fontFamily;
+                    ctx.font = fontStyle;
+                    ctx.fillStyle = lines[i].color;
+                    var textX = Math.round((width - 160 - ctx.measureText(lines[i].text).width) / 2),
+                        textY = height / 2 - ((lines.length - 1) / 2) * lineHeight + (i * lineHeight);
+                    ctx.fillText(lines[i].text, textX, textY);
+                }
+                ctx.save();
+            }
+        };
+
+    
+
+        new Chart(ctx2, {
+            type: 'doughnut',
+            data: {
+            labels: ['정상판매', '1~10% 할인', '11~20% 할인', '21~30% 할인', '31~40% 할인', '41~50% 할인', '기타'],
+            datasets: [{
+                label: '판매건수',
+                data: [500, 250, 300, 100, 150, 120, 40],
+                backgroundColor: [
+                'rgb(0, 0, 0)',
+                'rgb(77, 77, 77)',
+                'rgb(110, 110, 110)',
+                'rgb(143, 143, 143)',
+                'rgb(173, 173, 173)',
+                'rgb(204, 204, 204)',
+                'rgb(224, 224, 224)'
+                ],
+                hoverOffset: 4,
+                borderWidth : 0
+            }],
+            },
+            options: {
+                plugins : {
+                    
+                    legend: {
+                        position : 'right',
+                        labels:{
+                            pointStyle : 'circle',
+                            padding:32,
+                            usePointStyle:'ture',
+                            color: "#4B4F53", 
+                            font: {
+                                family : '"Noto Sans KR", sans-serif',
+                                size: 18,
+                            },
+                        }
+                       
+                    }
+                    ,
+                    layout: {
+                        padding: {
+                            right: 120 // 차트와 라벨 사이의 간격 설정
+                        }
+                    }
+                }
+            },   
+            plugins: [totalPlugin]
+        });
+
+        
+      
+      
+    </script>
+</body>
+
+</html>

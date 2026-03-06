@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>에누리</title>
+    <link rel="stylesheet" href="../../assets/lib/tui-date-picker.min.css">
+    <link rel="stylesheet" href="../../assets/css/common.css">
+    <link rel="stylesheet" href="../../assets/css/guide.css">
+    <link rel="stylesheet" href="../../assets/css/popup.css">
+</head>
+
+<body>
+    <!-- ========== 에누리 팝업 ========== -->
+    <div class="layer-wrap" id="popup-sample-sm" style="display: block;;">
+        <div class="layer-pop">
+            <div class="layer-inner">
+                <div class="layer-head">
+                    <h4 class="layer-title">에누리</h4>
+                </div><!--// layer-head  -->
+                <div class="layer-body">
+                    <div class="layer-content">
+                        <div class="input-group">
+                            <label for="payment-amount" class="input-group-label">결제금액</label>
+                            <input type="text" class="input-md txt-align-right" id="payment-amount"  value="318,000">
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-rate" class="input-group-label txt-error">할인율(%)</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-rate"  value="30" readonly>
+                        </div>
+                        <div class="input-group">
+                            <label for="discount-amount" class="input-group-label txt-error">할인금액</label>
+                            <input type="text" class="input-md txt-align-right" id="discount-amount"  value="31,600" >
+                        </div>
+                    </div><!--// layer-content -->
+                    <div class="layer-bottom">
+                        <div class="btn-area">
+                            <button type="button" class="btn btn-md btn-text ui-close-pop"><span>취소</span></button>
+                            <button type="button" class="btn btn-md btn-primary ui-close-pop"><span>적용하기</span></button>
+                        </div>
+                    </div><!--// layer-bottom  -->
+                </div><!--// layer-body  -->
+                <!-- <button type="button" class="btn-x-md2 ui-close-pop" title="닫기"><i class="ico-x-black"></i><span class="blind">닫기</span></button> -->
+            </div>
+        </div><!--// layer-pop  -->
+    </div><!--// layer-pop-wrap #popup-sample -->
+
+
+    
+    <script src="../../assets/lib/tui-date-picker.min.js"></script>
+    <script src="../../assets/js/index.js"></script>
+    <script>
+ 
+    </script>
+</body>
+
+</html>
