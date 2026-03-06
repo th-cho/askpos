@@ -68,9 +68,6 @@ document.addEventListener('DOMContentLoaded', function () {
                         <li>
                             <a href="../sale_management/sale_management_current.html">판매현황</a>
                         </li>
-                        <li>
-                            <a href="javascript:void(0);">판매관리2</a>
-                        </li>
                     </ul>
                 </li>
                 <li>
@@ -284,3 +281,4 @@ document.addEventListener('DOMContentLoaded', function () {
     })
 
 });
+
